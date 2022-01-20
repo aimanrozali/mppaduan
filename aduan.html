@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Majlis Perwakilan Pelajar USM</title>
+  <title>Aduan | Majlis Perwakilan Pelajar USM</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,8 +36,8 @@
 
 
 
-<!-- --- ADUAN SECTION--- -->
-  <div class="container">
+  <!-- --- ADUAN SECTION--- -->
+  <div class="aduan-container">
     <span class="big-circle"></span>
     <img src="images/shape.png" class="square" alt="" />
     <div class="form">
@@ -50,15 +50,15 @@
 
         <div class="info">
           <div class="information">
-            <img src="images/location.png" class="icon" alt="" />
+            <img src="images/location.png" class="aduan-icon" alt="" />
             <p>Universiti Sains Malaysia, Penang</p>
           </div>
           <div class="information">
-            <img src="images/email.png" class="icon" alt="" />
+            <img src="images/email.png" class="aduan-icon" alt="" />
             <p>mpp@usm</p>
           </div>
           <div class="information">
-            <img src="images/phone.png" class="icon" alt="" />
+            <img src="images/phone.png" class="aduan-icon" alt="" />
             <p>123-456-789</p>
           </div>
         </div>
@@ -71,32 +71,33 @@
         <form action="add_data.php">
           <h3 class="title">Student details</h3>
           <div class="input-container">
-		  <input type="text" name="name" class="input" autocomplete = "off" required />
+            <input type="text" name="name" class="input" autocomplete="off" required />
             <label for="">Name</label>
             <span>Name</span>
           </div>
           <div class="input-container">
-            <input type="text" name="matric" autocomplete = "off" maxlength="6" class="input" required />
+            <input type="text" name="matric" autocomplete="off" maxlength="6" class="input" required />
             <label for="">Matrics Number</label>
             <span>Matrics Number</span>
           </div>
           <div class="input-container">
-            <input type="email" name="email" class="input" autocomplete = "off" required />
+            <input type="email" name="email" class="input" autocomplete="off" required />
             <label for="">Student Email</label>
             <span>Student Email</span>
           </div>
-          <div class="input-container">
-            <label for="school" class = "input">School</label>
-			<select name="school" required>
-    <option value="" selected="selected">School</option>
-    <option value="School of Computer Sciences">School of Computer Sciences</option>
-    <option value="School of Communication">School of Communication</option>
-    <option value="School of Education">School of Education</option>
-    <option value="School of Physics">School of Physics</option>
-	</select>
+
+          <div class="school-input">
+            <select name="school" required>
+              <option value="" selected="selected">School</option>
+              <option value="School of Computer Sciences">School of Computer Sciences</option>
+              <option value="School of Communication">School of Communication</option>
+              <option value="School of Education">School of Education</option>
+              <option value="School of Physics">School of Physics</option>
+            </select>
           </div>
+
           <div class="input-container textarea">
-            <textarea name="content" class="input" autocomplete = "off" required></textarea>
+            <textarea name="content" class="input" autocomplete="off" required></textarea>
             <label for="">Message</label>
             <span>Message</span>
           </div>
