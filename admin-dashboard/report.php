@@ -188,9 +188,9 @@ if(!isset($_SESSION['success'])){
 
         <?php
           include "../create_conn.php";
-          $id = $_GET['reportid'];
-          $sql = "SELECT * FROM report WHERE REPORT_ID = '7'";
-          $result = conn->query($sql);
+          //$id = $_GET['reportid'];
+          $sql = "SELECT * FROM report WHERE REPORT_ID ='7'";
+          $result = $conn->query($sql);
           $rows=$result->fetch_assoc();
           $conn->close();
           ?>
