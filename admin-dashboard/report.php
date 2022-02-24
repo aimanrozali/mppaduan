@@ -285,7 +285,7 @@ if(!isset($_SESSION['success'])){
 						<blockquote class="blockquote blockquote-primary h-50 my-n2" >
 						<div class="my-n2 sticky py-sm-2"><h4>Organize Event </h4></div> 
 						<div>
-                      <p class= "scrolly-145">Want to organize an event at Tekun</p> 
+                      <p class= "scrolly-145">Want to organize an event at Tekun asfafafaew qefwffsdf qefefsdfswe fdsdfsfwe vdwefwfsdvsdv efadfsdfef qscadfwefefaf efadfsd fdsfe fefd fwef wef wv sdfwef sf swf wefwf sww efw efwgw f fewef wef qe wfqf wfe ew fwg svs fewgwrgefqfqegwfsef wef ws fswg efwg</p> 
 					  </div>
                     </blockquote>
 					</div>
