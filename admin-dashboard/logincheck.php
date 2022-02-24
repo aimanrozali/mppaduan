@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $servername = "aduanmpp.mysql.database.azure.com";
 $username = "adminkacak@aduanmpp";
@@ -18,7 +19,7 @@ if(isset($_POST['submit'])){
 	$row = mysqli_num_rows($query);
 		if($row == 1){
 			$_SESSION['success'] = 1;
-			session_start();
+			
 			header('location:dashboard.php');
 			exit();
 		}else{
