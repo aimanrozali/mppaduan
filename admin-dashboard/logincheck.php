@@ -1,10 +1,12 @@
 <?php
 session_start();
 
-$servername = "aduanmpp.mysql.database.azure.com";
-$username = "adminkacak@aduanmpp";
-$password = "Kacak_gagah01";
-$dbname = "aduan";
+// $servername = "aduanmpp.mysql.database.azure.com";
+// $username = "adminkacak@aduanmpp";
+// $password = "Kacak_gagah01";
+// $dbname = "aduan";
+
+include_once "../create_conn.php";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
