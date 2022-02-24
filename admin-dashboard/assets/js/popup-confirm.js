@@ -24,7 +24,7 @@ function CustomConfirm() {
       document.getElementById('dialogboxhead-success').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> ' + title;
     }
     document.getElementById('dialogboxbody-success').innerHTML = message;
-    document.getElementById('dialogboxfoot-success').innerHTML = '<button class="pure-material-button-contained btn-success active" onclick="customConfirm.ok()">OK</button> <button class="pure-material-button-contained btn-danger active" onclick="customConfirm.cancel()">Cancel</button>';
+    document.getElementById('dialogboxfoot-success').innerHTML = '<button class="pure-material-button-contained btn-success active" onclick="customConfirm.ok()">Solved</button> <button class="pure-material-button-contained btn-danger active" onclick="customConfirm.cancel()">Not Yet</button>';
 
     dialogoverlay.setAttribute('onclick', 'customConfirm.cancel()');
   }
