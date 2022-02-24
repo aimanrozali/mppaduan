@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
 
-	$sql = "SELECT * FROM  adminlogin WHERE admin_name='$username' AND admin_pass='$password'";
+	$sql = "SELECT * FROM adminlogin WHERE admin_name='$username' AND admin_pass='$password'";
 	$query = mysqli_query($conn,$sql);
 
 	$row = mysqli_num_rows($query);
