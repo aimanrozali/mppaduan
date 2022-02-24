@@ -315,7 +315,14 @@ if(!isset($_SESSION['success'])){
                             <td><?php echo $rows['REPORT_ID'];?></td>
                             <td><?php echo $rows['USER_NAME'];?></td>
 							              <td><?php echo $rows['REPORT_CONTENT'];?></td>
-                            <td><label class="badge badge-success">Completed</label></td>
+                            <?php 
+                              if($rows['resolved']==true)
+                              {
+                            echo'<td><label class="badge badge-success">Completed</label></td>';
+                              }
+                            else {
+                              echo'<td><label class="badge badge-danger">Pending</label></td>';
+                              } ?>
                           </tr>
                           <?php
                             }
