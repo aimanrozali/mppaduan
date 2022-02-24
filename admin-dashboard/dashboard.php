@@ -310,6 +310,7 @@ if(!isset($_SESSION['success'])){
                           <?php
                             while($rows=$result->fetch_assoc())
                             {
+                              
                           ?>
                           <tr data-url="report.php">
                             <td><?php echo $rows['REPORT_ID'];?></td>
@@ -325,6 +326,7 @@ if(!isset($_SESSION['success'])){
                               } ?>
                           </tr>
                           <?php
+                            $_SESSION["id"]= $rows['REPORT_ID'];
                             }
                           ?>
                           <!--

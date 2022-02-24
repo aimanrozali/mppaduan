@@ -184,6 +184,15 @@ if(!isset($_SESSION['success'])){
             </button>
           </div>
         </nav>
+
+        <?php
+          include "../create_conn.php";
+          $id = $_SESSION["id"];
+          $sql = "SELECT * FROM report WHERE REPORT_ID = '$id'";
+          $result = conn->query($sql);
+          $rows=$result->fetch_assoc();
+          $conn->close();
+          ?>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
@@ -199,7 +208,7 @@ if(!isset($_SESSION['success'])){
 					<p class="card-description mt-3"> Name:
                     </p>
                     <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"> <?php echo $rows['USER_NAME']?></p>
                     </blockquote>
 					
 					<div class="row">
@@ -216,12 +225,12 @@ if(!isset($_SESSION['success'])){
 					<div class="row  mt-2">
 					<div class = "col-6">
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25" > Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25" > <?php echo $rows['USER_MATRIC']?></p>
                     </blockquote>
 					</div>
 					<div class = "col-6">
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Dani Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"><?php echo $rows['USER_SCHOOL']?></p>
                     </blockquote>
 					</div>
 					</div>
@@ -229,7 +238,7 @@ if(!isset($_SESSION['success'])){
 					<p class="card-description"> Email:
                     </p>
                     <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"><?php echo $rows['USER_EMAIL']?></p>
                     </blockquote>
 					
 					<div class="row">
@@ -246,12 +255,12 @@ if(!isset($_SESSION['success'])){
 					<div class="row  mt-2">
 					<div class = "col-6">
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25" > Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25" ><?php echo $rows['DATE_RECEIVED']?></p>
                     </blockquote>
 					</div>
 					<div class = "col-6">
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Dani Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"><?php echo $rows['DATE_RESOLVED']?></p>
                     </blockquote>
 					</div>
 					</div>
@@ -276,16 +285,16 @@ if(!isset($_SESSION['success'])){
                     <p class="card-description mt-4"> Report ID:
                     </p>
                     <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"><?php echo $rows['REPORT_ID']?></p>
                     </blockquote>
 					
 					
 						<p class="card-description mt-4">Description:
                     </p>
 						<blockquote class="blockquote blockquote-primary h-50 my-n2" >
-						<div class="my-n2 sticky py-sm-2"><h4>Organize Event </h4></div> 
+						<div class="my-n2 sticky py-sm-2"><h4><?php echo $rows['report_title']?></h4></div> 
 						<div>
-                      <p class= "scrolly-145">Want to organize an event at Tekun asfafafaew qefwffsdf qefefsdfswe fdsdfsfwe vdwefwfsdvsdv efadfsdfef qscadfwefefaf efadfsd fdsfe fefd fwef wef wv sdfwef sf swf wefwf sww efw efwgw f fewef wef qe wfqf wfe ew fwg svs fewgwrgefqfqegwfsef wef ws fswg efwg</p> 
+                      <p class= "scrolly-145"><?php echo $rows['REPORT_CONTENT']?></p> 
 					  </div>
                     </blockquote>
 					</div>
