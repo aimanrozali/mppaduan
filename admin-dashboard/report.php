@@ -288,7 +288,7 @@ if(!isset($_SESSION['success'])){
                     <?php }
                     else { ?>
                     <div class = "w-100 my-n3 pb-2">
-					  <button type="button" class="btn btn-success btn-lg btn-block" id = "popup-confirm">
+					  <button type="button" class="btn btn-success btn-lg btn-block" >
                        SOLVED
                     </div>
                     <?php } ?>
