@@ -3,6 +3,7 @@ session_start();
 if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
+  error_reporting(-1);
 }
 ?>
 <!DOCTYPE html>
