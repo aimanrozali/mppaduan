@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
 
-	$sql = " select * from  adminlogin where admin_name='$username' and admin_pass='$password' ";
+	$sql = "select * from  adminlogin where admin_name='$username' and admin_pass='$password' ";
 	$query = mysqli_query($conn,$sql);
 
 	$row = mysqli_num_rows($query);
