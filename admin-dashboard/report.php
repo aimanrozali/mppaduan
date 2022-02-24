@@ -279,10 +279,19 @@ if(!isset($_SESSION['success'])){
 				  <p class="card-description my-n1"> </p>
                     <h4 class="card-title">Reports Details</h4>
 					<p class="card-description"> Status: </p>
+          <?php if($rows['resolved']==false)
+            { ?>
 					<div class = "w-100 my-n3 pb-2">
 					  <button type="button" class="btn btn-danger btn-lg btn-block" id = "popup-confirm">
                        UNSOLVED
                     </div>
+                    <?php }
+                    else { ?>
+                    <div class = "w-100 my-n3 pb-2">
+					  <button type="button" class="btn btn-success btn-lg btn-block" id = "popup-confirm">
+                       SOLVED
+                    </div>
+                    <?php } ?>
                     <p class="card-description mt-4"> Report ID:
                     </p>
                     <blockquote class="blockquote h-8 my-n2">

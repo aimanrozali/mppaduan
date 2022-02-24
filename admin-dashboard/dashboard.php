@@ -313,11 +313,11 @@ if(!isset($_SESSION['success'])){
                               
                           ?>
                           <?php
+                          //binding address
                             $id = $rows["REPORT_ID"];
                             $url = 'report.php';
                             $url .= '?reportid=';
                             $url .= $id;
-                            //header('Location: '.$url);
                             ?>
                           <tr data-url=<?php echo $url; ?>>
                             <td><?php echo $rows['REPORT_ID'];?></td>
