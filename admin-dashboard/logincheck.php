@@ -1,8 +1,12 @@
-
 <?php
 
+$servername = "aduanmpp.mysql.database.azure.com";
+$username = "adminkacak@aduanmpp";
+$password = "Kacak_gagah01";
+$dbname = "aduan";
 
-require_once "../create_conn.php";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if(isset($_POST['submit'])){
 	$username = $_POST['user'];
