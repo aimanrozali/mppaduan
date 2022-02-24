@@ -313,8 +313,10 @@ if(!isset($_SESSION['success'])){
                               
                           ?>
                           <?php
+                            $id = $rows["REPORT_ID"];
                             $url = 'report.php';
-                            $url .= '?reportid= $rows["REPORT_ID"]';
+                            $url .= '?reportid=';
+                            $url .= $id;
                             //header('Location: '.$url);
                             ?>
                           <tr data-url=<?php echo $url; ?>>
