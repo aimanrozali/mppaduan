@@ -314,7 +314,7 @@ if(!isset($_SESSION['success'])){
                           <tr data-url="report.php">
                             <td><?php echo $rows['REPORT_ID'];?></td>
                             <td><?php echo $rows['USER_NAME'];?></td>
-							              <td><?php echo $rows['REPORT CONTENT'];?></td>
+							              <td><?php echo $rows['REPORT_CONTENT'];?></td>
                             <td><label class="badge badge-success">Completed</label></td>
                           </tr>
                           <?php
