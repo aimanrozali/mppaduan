@@ -291,6 +291,12 @@ if(!isset($_SESSION['success'])){
 					 <span class="card-description font-weight-normal" >, </span>
 					 <span class="card-description font-weight-normal" id = "day"></span>
                     <div class="table-responsive">
+                    <?php
+                      include "../create_conn.php";
+                      $sql = "SELECT * FROM report";
+                      $result = $conn->query($sql);
+                      $conn->close();
+                    ?>
                       <table class="table table-hover">
                         <thead>
                           <tr data-url="">
@@ -301,12 +307,20 @@ if(!isset($_SESSION['success'])){
                           </tr>
                         </thead>
                         <tbody>
+                          <?php
+                            while($rows=$result->fetch_assoc())
+                            {
+                          ?>
                           <tr data-url="report.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
+                            <td><?php echo $rows['REPORT_ID'];?></td>
+                            <td><?php echo $rows['USER_NAME'];?></td>
+							              <td><?php echo $rows['REPORT CONTENT'];?></td>
                             <td><label class="badge badge-success">Completed</label></td>
                           </tr>
+                          <?php
+                            }
+                          ?>
+                          <!--
                           <tr data-url="report.php">
                             <td>002</td>
                             <td>Alice</td>
@@ -343,6 +357,7 @@ if(!isset($_SESSION['success'])){
 							<td>Complaint about Desa</td>
 							<td><label class="badge badge-success">Completed</label></td>
                           </tr>
+                          -->
                         </tbody>
                       </table>
                     </div>
