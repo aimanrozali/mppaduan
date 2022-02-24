@@ -266,7 +266,7 @@ if(!isset($_SESSION['success'])){
                         <h6 class="mb-1">Total Unsolved</h6>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">10</h6>
+                        <h6 class="font-weight-bold mb-0">50</h6>
                       </div>
                     </div>
 					</a>
@@ -276,7 +276,7 @@ if(!isset($_SESSION['success'])){
                         <h6 class="mb-1">Total Solved</h6>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">100</h6>
+                        <h6 class="font-weight-bold mb-0">50</h6>
                       </div>
                     </div>
 					</a>
