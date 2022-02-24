@@ -1,8 +1,8 @@
 
 <?php
-session_start();
 
-include "../create_conn.php";
+
+require_once "../create_conn.php";
 
 if(isset($_POST['submit'])){
 	$username = $_POST['user'];
@@ -14,6 +14,7 @@ if(isset($_POST['submit'])){
 	$row = mysqli_num_rows($query);
 		if($row == 1){
 			$_SESSION['success'] = 1;
+			session_start();
 			header('location:dashboard.php');
 			exit();
 		}else{
