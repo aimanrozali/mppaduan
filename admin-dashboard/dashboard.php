@@ -317,7 +317,7 @@ if(!isset($_SESSION['success'])){
                             $url .= '?reportid= $rows["REPORT_ID"]';
                             //header('Location: '.$url);
                             ?>
-                          <tr data-url="$url">
+                          <tr data-url=$url>
                             <td><?php echo $rows['REPORT_ID'];?></td>
                             <td><?php echo $rows['USER_NAME'];?></td>
 							              <td><?php echo $rows['REPORT_CONTENT'];?></td>
