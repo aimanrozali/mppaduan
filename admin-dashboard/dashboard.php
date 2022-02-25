@@ -394,9 +394,10 @@ if(!isset($_SESSION['success'])){
           </div>
           <div id ="x"><?php echo($data1['totals'])?></div>
           <div id ="y">5</div>
-          <script type="text/javascript">var sov= "<?= $data1['totals'] ?>";
-          var usov = "<?= $data2['totalu'] ?>";
+          <script type="text/javascript">var sov= <?= $data1['totals'] ?>;
+          var usov = <?= $data2['totalu'] ?>;
           </script>
+          <script type="text/javascript" src="assets/js/dashboard.js"></script>
          
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->

@@ -2,14 +2,14 @@
 
 (function ($) {
 
-  var sov;
-  var usov;
+  // var sov;
+  // var usov;
 
 
-  window.onload = function () {
-    sov = parseInt(document.getElementById('x').value);
-    usov = parseInt(document.getElementById('y'));
-  }
+  // window.onload = function () {
+  //   sov = parseInt(document.getElementById('x').value);
+  //   usov = parseInt(document.getElementById('y'));
+  // }
 
   console.log(sov);
   console.log(usov);
