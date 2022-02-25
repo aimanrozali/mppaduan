@@ -107,7 +107,7 @@
           ctx.textBaseline = "middle";
           ctx.fillStyle = "#ffffff";
 
-          var text = "110",
+          var text = x + y,
             textX = Math.round((width - ctx.measureText(text).width) / 2),
             textY = height / 2.4;
 
