@@ -6,10 +6,10 @@
   var usov;
 
 
-  // window.onload = function () {
-  //   sov = parseInt(document.getElementsByClassName('x').value);
-  //   usov = parseInt(document.getElementsByClassName('y'));
-  // }
+  window.onload = function () {
+    sov = parseInt(document.getElementsById('x').value);
+    usov = parseInt(document.getElementsById('y'));
+  }
 
   console.log(sov);
   console.log(usov);
