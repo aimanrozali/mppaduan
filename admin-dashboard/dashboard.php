@@ -393,7 +393,7 @@ if(!isset($_SESSION['success'])){
             </div>
           </div>
           <p id="x">
-            <?php echo(32);?>
+            Hello WOrkd
                           </p>
           <p id="y">
           <?php echo($data2['total']);?>
