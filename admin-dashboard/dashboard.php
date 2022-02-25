@@ -266,6 +266,8 @@ if(!isset($_SESSION['success'])){
             <script src="assets/js/dashboard.js">
                 tsov = <?php mysql_fetch_assoc($resultsov); ?>;
                 usov = <?php mysql_fetch_assoc($resultusov); ?>;
+                console.log(tsov);
+                console.log(usov);
                 </script>
             <div class="row">
                <div class="col-md-4 grid-margin stretch-card">
