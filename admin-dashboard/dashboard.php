@@ -254,6 +254,19 @@ if(!isset($_SESSION['success'])){
               </div>
 			  
             </div>
+            <?php
+              include "../create_conn.php";
+              $sqlsov = "SELECT COUNT(*) FROM report WHERE resolved='true'";
+              $sqlusov = "SELECT COUNT(*) FROM report WHERE resolved='false'";
+              $resultsov = $conn->query($sqlsov);
+              $resultusov = $conn->query($sqlusov);
+              $conn->close();
+              
+              ?>
+            <script type="text/javascript" src= "assets/js/dashboard.js">
+                tsov = <?php mysql_fetch_assoc($resultsov); ?>;
+                usov = <?php mysql_fetch_assoc($resultusov); ?>;
+                </script>
             <div class="row">
                <div class="col-md-4 grid-margin stretch-card">
                 <div class="card ">
