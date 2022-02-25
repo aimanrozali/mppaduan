@@ -2,7 +2,6 @@
 
 (function ($) {
 
-  console.log(x);
 
   'use strict';
   $.fn.andSelf = function () {
@@ -68,7 +67,7 @@
     }
     if ($("#transaction-history").length) {
       var areaData = {
-        labels: ["Unsolvedsads", "Solved"],
+        labels: ["Unsolved", "Solved"],
         datasets: [{
           data: [21, 32],
           backgroundColor: [
