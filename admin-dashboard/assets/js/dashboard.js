@@ -4,6 +4,8 @@
 
   var x = document.getElementById('x');
   var y = document.getElementById('y');
+  console.log(x);
+  console.log(y);
 
   'use strict';
   $.fn.andSelf = function () {
