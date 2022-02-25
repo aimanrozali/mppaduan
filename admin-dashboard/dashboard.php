@@ -392,8 +392,10 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
-          <p class ="x"><?php echo($data1['totals'])?></p>
-          <p class ="y">5</p>
+          
+          <script type="text/javascript">var sov= "<?= $data1['totals'] ?>";
+          var usov = "<?= $data2['totalu'] ?>";
+          </script>
          
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
