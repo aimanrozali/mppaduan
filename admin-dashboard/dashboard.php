@@ -256,8 +256,8 @@ if(!isset($_SESSION['success'])){
             </div>
             <?php
               include "../create_conn.php";
-              $sqlsov = "SELECT COUNT(*) AS totals FROM report WHERE resolved='true'";
-              $sqlusov = "SELECT COUNT(*) AS totalu FROM report WHERE resolved='false'";
+              $sqlsov = "SELECT COUNT(*) AS totals FROM report WHERE resolved='1'";
+              $sqlusov = "SELECT COUNT(*) AS totalu FROM report WHERE resolved='0'";
               $resultsov = $conn->query($sqlsov);
               $resultusov = $conn->query($sqlusov);
               $conn->close();
@@ -277,7 +277,7 @@ if(!isset($_SESSION['success'])){
                         <h6 class="mb-1">Total Unsolved</h6>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0" id="y"><?php echo($data2['totalu']);?></h6>
+                        <h6 class="font-weight-bold mb-0" id = "y"><?php echo($data2['totalu']);?></h6>
                       </div>
                     </div>
 					</a>
@@ -287,7 +287,7 @@ if(!isset($_SESSION['success'])){
                         <h6 class="mb-1">Total Solved</h6>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0" id="x"><?php echo($data1['totals']);?></h6>
+                        <h6 class="font-weight-bold mb-0" id = "x"><?php echo($data1['totals']);?></h6>
                       </div>
                     </div>
 					</a>
