@@ -263,8 +263,8 @@ if(!isset($_SESSION['success'])){
               $conn->close();
               
               ?>
-              <?php $data1 = $resultsov->fetch_assoc();?>;
-              <?php $data2 = $resultusov->fetch_assoc();?>;
+              <?php $data1 = $resultsov->fetch_assoc();?>
+              <?php $data2 = $resultusov->fetch_assoc();?>
             <div class="row">
                <div class="col-md-4 grid-margin stretch-card">
                 <div class="card ">
@@ -392,8 +392,8 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
-          <p id="x"><?php echo($data1['totals']);?></p>
-          <p id="y"><?php echo($data2['totalu']);?></p>
+          <p id = "x"><?php echo($data1['totals'])?></p>
+          <p id = "y"><?php echo($data2['totalu'])?></p>
          
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
