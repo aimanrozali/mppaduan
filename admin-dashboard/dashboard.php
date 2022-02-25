@@ -425,8 +425,8 @@ if(!isset($_SESSION['success'])){
     <script src="assets/js/settings.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <!-- <script src="assets/js/dashboard.js"> 
-    </script> -->
+    <script src="assets/js/dashboard.js"> 
+    </script>
 	<script src="assets/js/date.js"></script>
 	<script src="assets/js/table-hover.js"></script>
     <!-- End custom js for this page -->
