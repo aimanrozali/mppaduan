@@ -2,8 +2,8 @@
 
 (function ($) {
 
-  var sov = $("#x");
-  var usov = $("#y");
+  var sov = $("#x").outerText;
+  var usov = $("#y").outerText;
   console.log(sov);
   console.log(usov);
 
