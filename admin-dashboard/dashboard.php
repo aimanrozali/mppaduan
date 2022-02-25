@@ -392,12 +392,12 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
-          <div id="x">
+          <p id="x">
             <?php echo($data1['total']);?>
-            </div>
-          <div id="y">
+                          </p>
+          <p id="y">
           <?php echo($data2['total']);?>
-            </div>
+                          </p>
             
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
