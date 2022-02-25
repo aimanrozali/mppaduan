@@ -393,7 +393,7 @@ if(!isset($_SESSION['success'])){
             </div>
           </div>
           <p id = "x"><?php echo($data1['totals'])?></p>
-          <p id = "y"><?php echo($data2['totalu'])?></p>
+          <p id = "y">5</p>
          
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
