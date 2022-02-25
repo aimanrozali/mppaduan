@@ -392,6 +392,13 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
+          <div id="x">
+            <?php echo($data1['total']);?>
+            </div>
+          <div id="y">
+          <?php echo($data2['total']);?>
+            </div>
+            
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
@@ -420,8 +427,7 @@ if(!isset($_SESSION['success'])){
     <script src="assets/js/settings.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="assets/js/dashboard.js"> var x = <?php echo($data1['total']);?>;
-    var y = <?php echo($data2['total']);?>; 
+    <script src="assets/js/dashboard.js"> 
     </script>
 	<script src="assets/js/date.js"></script>
 	<script src="assets/js/table-hover.js"></script>

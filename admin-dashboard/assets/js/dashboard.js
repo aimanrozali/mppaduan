@@ -2,6 +2,8 @@
 
 (function ($) {
 
+  var x = document.getElementById('x');
+  var y = document.getElementById('y');
 
   'use strict';
   $.fn.andSelf = function () {
