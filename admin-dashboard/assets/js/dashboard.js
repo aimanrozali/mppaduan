@@ -2,7 +2,7 @@
 
 (function ($) {
 
-  var x = document.getElementById('x');
+  var x = parseInt(document.getElementById('x').value);
   var y = parseInt(document.getElementById('y').value);
   console.log(x);
   console.log(y);
@@ -73,7 +73,7 @@
       var areaData = {
         labels: ["Unsolved", "Solved"],
         datasets: [{
-          data: [21, 32],
+          data: [y, x],
           backgroundColor: [
             "#fc424a", "#00d25b"
           ]

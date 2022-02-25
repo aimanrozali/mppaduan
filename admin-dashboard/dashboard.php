@@ -277,7 +277,7 @@ if(!isset($_SESSION['success'])){
                         <h6 class="mb-1">Total Unsolved</h6>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0"><?php echo($data2['total']);?></h6>
+                        <h6 class="font-weight-bold mb-0" id="y"><?php echo($data2['total']);?></h6>
                       </div>
                     </div>
 					</a>
@@ -287,7 +287,7 @@ if(!isset($_SESSION['success'])){
                         <h6 class="mb-1">Total Solved</h6>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">50</h6>
+                        <h6 class="font-weight-bold mb-0" id="x"><?php echo($data1['total']);?></h6>
                       </div>
                     </div>
 					</a>
@@ -392,13 +392,7 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
-          <p id="x">
-            Hello WOrkd
-                          </p>
-          <p id="y">
-          <?php echo($data2['total']);?>
-                          </p>
-            
+         
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
