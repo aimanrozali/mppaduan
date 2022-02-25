@@ -2,8 +2,8 @@
 
 (function ($) {
 
-  var sov = document.getElementById('x').value;
-  var usov = document.getElementById('y').value;
+  var sov = $("#x");
+  var usov = $("#y");
   console.log(sov);
   console.log(usov);
 
