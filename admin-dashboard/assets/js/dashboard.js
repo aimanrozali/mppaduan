@@ -68,7 +68,7 @@
     }
     if ($("#transaction-history").length) {
       var areaData = {
-        labels: ["Unsolved", "Solved"],
+        labels: ["Unsolvedsads", "Solved"],
         datasets: [{
           data: [21, 32],
           backgroundColor: [
