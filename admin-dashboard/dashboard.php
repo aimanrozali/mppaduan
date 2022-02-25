@@ -264,8 +264,8 @@ if(!isset($_SESSION['success'])){
               
               ?>
             <script src="assets/js/dashboard.js">
-                tsov = <?php mysql_fetch_assoc($resultsov); ?>;
-                usov = <?php mysql_fetch_assoc($resultusov); ?>;
+                tsov = <?php $data1 = $resultsov->fetch_assoc(); echo $data1['total']; ?>;
+                usov = <?php $data2 = $resultusov->fetch_assoc(); echo $data2['total']; ?>;
                 console.log(45);
                 console.log(usov);
                 </script>
