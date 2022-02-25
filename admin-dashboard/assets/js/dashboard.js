@@ -2,10 +2,10 @@
 
 (function ($) {
 
-  var x = document.getElementById('sov').value;
-  var y = document.getElementById('usov').value;
-  console.log(x);
-  console.log(y);
+  var sov = document.getElementById('sov').value;
+  var usov = document.getElementById('usov').value;
+  console.log(sov);
+  console.log(usov);
 
   'use strict';
   $.fn.andSelf = function () {
@@ -73,7 +73,7 @@
       var areaData = {
         labels: ["Unsolved", "Solved"],
         datasets: [{
-          data: [y, x],
+          data: [usov, sov],
           backgroundColor: [
             "#fc424a", "#00d25b"
           ]
@@ -110,7 +110,7 @@
           ctx.textBaseline = "middle";
           ctx.fillStyle = "#ffffff";
 
-          var text = x + y,
+          var text = sov + usov,
             textX = Math.round((width - ctx.measureText(text).width) / 2),
             textY = height / 2.4;
 
