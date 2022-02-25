@@ -2,8 +2,8 @@
 
 (function ($) {
 
-  var sov = $("#x").outerText;
-  var usov = $("#y").outerText;
+  var sov = parseInt(getElementById('x').value);
+  var usov = parseInt(getElementById('y').value);
   console.log(sov);
   console.log(usov);
 
