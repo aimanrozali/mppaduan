@@ -2,8 +2,8 @@
 
 (function ($) {
 
-  var x = parseInt(document.getElementById('sov'));
-  var y = parseInt(document.getElementById('usov'));
+  var x = document.getElementById('sov').value;
+  var y = document.getElementById('usov').value;
   console.log(x);
   console.log(y);
 
