@@ -2,8 +2,7 @@
 
 (function ($) {
 
-  var tsov;
-  var usov;
+  console.log(x);
 
   'use strict';
   $.fn.andSelf = function () {
@@ -71,7 +70,7 @@
       var areaData = {
         labels: ["Unsolved", "Solved"],
         datasets: [{
-          data: [tsov, usov],
+          data: [x, y],
           backgroundColor: [
             "#fc424a", "#00d25b"
           ]

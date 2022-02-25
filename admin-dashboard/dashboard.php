@@ -263,12 +263,8 @@ if(!isset($_SESSION['success'])){
               $conn->close();
               
               ?>
-            <script src="assets/js/dashboard.js">
-                tsov = <?php $data1 = $resultsov->fetch_assoc(); echo $data1['total']; ?>;
-                usov = <?php $data2 = $resultusov->fetch_assoc(); echo $data2['total']; ?>;
-                console.log(45);
-                console.log(usov);
-                </script>
+              <?php $data1 = $resultsov->fetch_assoc();?>;
+              <?php $data2 = $resultusov->fetch_assoc();?>;
             <div class="row">
                <div class="col-md-4 grid-margin stretch-card">
                 <div class="card ">
@@ -424,7 +420,9 @@ if(!isset($_SESSION['success'])){
     <script src="assets/js/settings.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/dashboard.js"> var x = <?php echo($data1['total']);?>;
+    var y = <?php echo($data2['total']);?>; 
+    </script>
 	<script src="assets/js/date.js"></script>
 	<script src="assets/js/table-hover.js"></script>
     <!-- End custom js for this page -->
