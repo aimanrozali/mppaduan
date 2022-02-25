@@ -263,7 +263,7 @@ if(!isset($_SESSION['success'])){
               $conn->close();
               
               ?>
-            <script type="text/javascript" src= "assets/js/dashboard.js">
+            <script src="assets/js/dashboard.js">
                 tsov = <?php mysql_fetch_assoc($resultsov); ?>;
                 usov = <?php mysql_fetch_assoc($resultusov); ?>;
                 </script>
