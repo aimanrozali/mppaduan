@@ -256,8 +256,8 @@ if(!isset($_SESSION['success'])){
             </div>
             <?php
               include "../create_conn.php";
-              $sqlsov = "SELECT COUNT(*) FROM report WHERE resolved='true'";
-              $sqlusov = "SELECT COUNT(*) FROM report WHERE resolved='false'";
+              $sqlsov = "SELECT COUNT(*) AS total FROM report WHERE resolved='true'";
+              $sqlusov = "SELECT COUNT(*) AS total FROM report WHERE resolved='false'";
               $resultsov = $conn->query($sqlsov);
               $resultusov = $conn->query($sqlusov);
               $conn->close();
