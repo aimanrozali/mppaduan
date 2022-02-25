@@ -3,7 +3,7 @@
 (function ($) {
 
   var x = document.getElementById('x');
-  var y = document.getElementById('y').value;
+  var y = parseInt(document.getElementById('y').value);
   console.log(x);
   console.log(y);
 
