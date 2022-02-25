@@ -70,7 +70,7 @@
       var areaData = {
         labels: ["Unsolved", "Solved"],
         datasets: [{
-          data: [x, y],
+          data: [21, 32],
           backgroundColor: [
             "#fc424a", "#00d25b"
           ]
