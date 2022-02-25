@@ -392,8 +392,8 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
-          <p id="sov"><?php echo($data1['totals']);?></p>
-          <p id="usov"><?php echo($data2['totalu']);?></p>
+          <p id="x"><?php echo($data1['totals']);?></p>
+          <p id="y"><?php echo($data2['totalu']);?></p>
          
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
