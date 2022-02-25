@@ -7,8 +7,8 @@
 
 
   window.onload = function () {
-    sov = parseInt(document.getElementsById('x').value);
-    usov = parseInt(document.getElementsById('y'));
+    sov = parseInt(document.getElementById('x').value);
+    usov = parseInt(document.getElementById('y'));
   }
 
   console.log(sov);
