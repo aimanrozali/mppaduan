@@ -54,7 +54,7 @@
 		$in_content = $_GET['content'];
 		$in_content = "'".addslashes($in_content)."'";
 
-		$datereceived = date('Y-m-d');
+		$datereceived = "'".addslashes(date('Y-m-d'))."'";
 
 	include "create_conn.php";
 
