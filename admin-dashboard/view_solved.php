@@ -3,11 +3,11 @@ session_start();
 if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
+}
 include "../create_conn.php";
 $sql = "SELECT * FROM report WHERE resolved='1'";
 $result = $conn->query($sql);
 $conn->close();
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -241,22 +241,22 @@ $conn->close();
                         </thead>
                         <tbody>
                           <?php
-                            while($rows=$result->fetch_assoc())
+                            while($row=$result->fetch_assoc())
                             {
                             ?>
                             <?php
                           //binding address
-                            $id = $rows["REPORT_ID"];
+                            $id = $row["REPORT_ID"];
                             $url = 'report.php';
                             $url .= '?reportid=';
                             $url .= $id;
                             ?>
                             
 						 <tr data-url=<?= $url ?>>
-                            <td><?= $rows['REPORT_ID'] ?></td>
-							<td><?= $rows['DATE_RECEIVED'] ?></td>
-                            <td><?= $rows['USER_NAME'] ?></td>
-							<td><?= $rows['report_title'] ?></td>
+                            <td><?php echo $row['REPORT_ID']; ?></td>
+							<td><?php echo $row['DATE_RECEIVED']; ?></td>
+                            <td><?php echo $row['USER_NAME']; ?></td>
+							<td><?php echo $row['report_title']; ?></td>
                           </tr>
                             <?php } ?>
                           <!-- <tr data-url="report.php">
