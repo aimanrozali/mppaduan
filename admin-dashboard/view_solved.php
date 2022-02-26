@@ -252,7 +252,7 @@ $conn->close();
                             $url .= $id;
                             ?>
                             
-						 <tr data-url="<?= $url ?>">
+						 <tr data-url=<?= $url ?>>
                             <td><?= $rows['REPORT_ID'] ?></td>
 							<td><?= $rows['DATE_RECEIVED'] ?></td>
                             <td><?= $rows['USER_NAME'] ?></td>
