@@ -5,6 +5,18 @@ if(!isset($_SESSION['success'])){
 	exit;
 }
 ?>
+<?php
+              include "../create_conn.php";
+              $sqlsov = "SELECT COUNT(*) AS totals FROM report WHERE resolved='1'";
+              $sqlusov = "SELECT COUNT(*) AS totalu FROM report WHERE resolved='0'";
+              $sqltd = "SELECT COUNT(*) AS totaltoday FROM report WHERE DATE(DATE_RECEIVED)";
+              $resultsov = $conn->query($sqlsov);
+              $resultusov = $conn->query($sqlusov);
+              $resulttd = $conn->query($sqltd);
+              $conn->close();
+              $data3 = $resulttd->fetch_assoc();
+              
+              ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -216,7 +228,7 @@ if(!isset($_SESSION['success'])){
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">11</h3>
+                          <h3 class="mb-0"><?= $data3['totaltoday'] ?></h3>
                         </div>
                       </div>
                       <div class="col-3">
@@ -238,8 +250,8 @@ if(!isset($_SESSION['success'])){
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">102</h3>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">+11</p>
+                          <h3 class="mb-0"><?= $data2['totalu'] ?></h3>
+                          <p class="text-danger ml-2 mb-0 font-weight-medium"><?= $data3['totaltoday'] ?></p>
                         </div>
                       </div>
                       <div class="col-3">
@@ -255,15 +267,7 @@ if(!isset($_SESSION['success'])){
               </div>
 			  
             </div>
-            <?php
-              include "../create_conn.php";
-              $sqlsov = "SELECT COUNT(*) AS totals FROM report WHERE resolved='1'";
-              $sqlusov = "SELECT COUNT(*) AS totalu FROM report WHERE resolved='0'";
-              $resultsov = $conn->query($sqlsov);
-              $resultusov = $conn->query($sqlusov);
-              $conn->close();
-              
-              ?>
+            
               <?php $data1 = $resultsov->fetch_assoc();?>
               <?php $data2 = $resultusov->fetch_assoc();?>
             <div class="row">
