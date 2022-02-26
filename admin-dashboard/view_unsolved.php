@@ -5,7 +5,7 @@ if(!isset($_SESSION['success'])){
 	exit;
 }
 include "../create_conn.php";
-$sql = "SELECT * FROM report WHERE resolved='1'";
+$sql = "SELECT * FROM report WHERE resolved='0'";
 $result = $conn->query($sql);
 $conn->close();
 ?>
