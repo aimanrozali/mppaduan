@@ -253,7 +253,7 @@ if(!isset($_SESSION['success'])){
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
                           <h3 class="mb-0"><?= $data2['totalu'] ?></h3>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium"><?= $data3['totaltoday'] ?></p>
+                          <p class="text-danger ml-2 mb-0 font-weight-medium">+<?= $data2['totalu']-$data3['totaltoday'] ?></p>
                         </div>
                       </div>
                       <div class="col-3">
