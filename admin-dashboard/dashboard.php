@@ -17,6 +17,8 @@ if(!isset($_SESSION['success'])){
               $data3 = $resulttd->fetch_assoc();
               
               ?>
+              <?php $data1 = $resultsov->fetch_assoc();?>
+              <?php $data2 = $resultusov->fetch_assoc();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -268,8 +270,7 @@ if(!isset($_SESSION['success'])){
 			  
             </div>
             
-              <?php $data1 = $resultsov->fetch_assoc();?>
-              <?php $data2 = $resultusov->fetch_assoc();?>
+              
             <div class="row">
                <div class="col-md-4 grid-margin stretch-card">
                 <div class="card ">
