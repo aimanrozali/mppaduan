@@ -4,6 +4,10 @@ if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
 }
+include "../create_conn.php";
+$sql = "SELECT * FROM report WHERE resolved='1'";
+$result = $conn->query($sql);
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -237,13 +241,26 @@ if(!isset($_SESSION['success'])){
                           </tr>
                         </thead>
                         <tbody>
-						 <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
+                          <?php while($rows=$result->fetch_assoc())
+                          {
+                            ?>
+                          <?php
+                          //binding address
+                            $id = $rows["REPORT_ID"];
+                            $url = 'report.php';
+                            $url .= '?reportid=';
+                            $url .= $id;
+                            ?>
+
+						 <tr data-url=<?= $url ?>>
+                            <td><?php echo $rows['REPORT_ID'];?></td>
+							<td><?php echo $rows['DATE_RECEIVED'];?></td>
+                            <td><?php echo $rows['USER_NAME'];?></td>
+							<td><?php echo $rows['report_title'];?></td>
                           </tr>
-                          <tr data-url="report.php">
+                          <?php }
+                          ?>
+                          <!-- <tr data-url="report.php">
                             <td>001</td>
 							<td>21/02/2022</td>
                             <td>Dave</td>
@@ -296,7 +313,7 @@ if(!isset($_SESSION['success'])){
 							<td>21/02/2022</td>
                             <td>Dave</td>
 							<td>Complaint about Desa</td>
-                          </tr>
+                          </tr> -->
                         </tbody>
                       </table>
                         
