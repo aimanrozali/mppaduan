@@ -254,7 +254,7 @@ $conn->close();
                             
 						 <tr data-url=<?= $url ?>>
                             <td><?php echo $row['REPORT_ID']; ?></td>
-							<td><?php echo $row['DATE_RECEIVED']; ?></td>
+							<td><?php echo $row['DATE_RESOLVED']; ?></td>
                             <td><?php echo $row['USER_NAME']; ?></td>
 							<td><?php echo $row['report_title']; ?></td>
                           </tr>
