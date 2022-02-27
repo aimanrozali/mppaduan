@@ -339,7 +339,7 @@ if(!isset($_SESSION['success'])){
                           <tr data-url=<?php echo $url; ?>>
                             <td><?php echo $rows['REPORT_ID'];?></td>
                             <td><?php echo $rows['USER_NAME'];?></td>
-							              <td><?php echo $rows['REPORT_CONTENT'];?></td>
+							              <td><?php echo $rows['report_title'];?></td>
                             <?php 
                               if($rows['resolved']==true)
                               {
