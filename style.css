@@ -5,115 +5,29 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-a {
-  text-decoration: none !important;
+.section-padding {
+  padding: 100px 0;
 }
 
-li {
-  list-style: none;
+
+/* NAVBAR */
+
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background-color: white;
-  color: #fff;
-  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .2);
+.navbar-toggler-icon {
+  font-size: 0.6em;
 }
 
-.nav-links a {
-  color: black;
+.navbar-light .navbar-nav .navbar-link {
+  color: #000;
 }
-
-/* LOGO */
-.logo img {
-  max-width: 400px;
-}
-
-/* NAVBAR MENU */
-.menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
-  margin-top: 15px;
-}
-
-.menu li:hover {
-  background-color: white;
-  border-radius: 5px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .2);
-}
-
-.menu li {
-  padding: 5px 14px;
-}
-
-/*RESPONSIVE NAVBAR MENU STARTS*/
-input[type=checkbox] {
-  display: none;
-}
-
-/*HAMBURGER MENU*/
-.hamburger {
-  display: none;
-  font-size: 24px;
-  user-select: none;
-  cursor: pointer;
-}
-
-/* APPLYING MEDIA QUERIES */
-@media (max-width: 768px) {
-
-  .logo img {
-      max-width: 200px;
-  }
-
-  .menu {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      right: 0;
-      left: 0;
-      text-align: center;
-      padding: 16px 0;
-      z-index: 1000;
-  }
-
-  .menu li:hover {
-      display: inline-block;
-      background-color: #94258e;
-      transition: 0.3s ease;
-  }
-
-  .menu li a:hover {
-      color: white;
-  }
-
-  .menu li+li {
-      margin-top: 12px;
-  }
-
-  input[type=checkbox]:checked~.menu {
-      display: block;
-  }
-
-  .hamburger {
-      margin-top: 10px;
-      display: block;
-      color: #94258e;
-  }
-}
-
 
 /* --- CAROUSEL --- */
-.carousel {
-  margin-bottom: 4rem;
-}
 
-/* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
@@ -144,20 +58,24 @@ input[type=checkbox] {
   height: 500px;
 
   box-shadow:
-      0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075),
-      0 16px 16px hsl(0deg 0% 0% / 0.075);
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 /* ---SERVICE SECTION---- */
+
+.services .card-body i {
+  font-size: 50px;
+}
 
 .service {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  /* height: 50vh; */
   background-color: #f6f5fc;
 }
 
@@ -198,115 +116,123 @@ input[type=checkbox] {
 
 @media (max-width: 768px) {
 
-  .service {
-      height: 100vh;
-  }
-
   .boxs {
-      grid-template-columns: none;
+    grid-template-columns: none;
   }
 
   .box {
-      height: 200px;
-      width: 200px;
-      margin: 10px 0;
+    height: 200px;
+    width: 200px;
+    margin: 10px 0;
   }
 
-  #box3 {
-      margin-bottom: 50px;
-  }
 
   .icon {
-      width: 50px;
+    width: 50px;
   }
 
   .box h2 {
-      font-size: 0.7rem;
-      margin-top: 5px;
+    font-size: 0.7rem;
+    margin-top: 5px;
   }
 
   .box p {
-      font-size: 0.5rem;
-      color: gray;
+    font-size: 0.5rem;
+    color: gray;
   }
 }
 
 /* ---Announcement Section--- */
 
-.announcement {
+
+.announceSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  width: 70%;
+}
+
+.announceCard {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  margin: 20px 0;
+  width: 280px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.announceSection .announceCard .image {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  top: 0;
+  background-image: url(images/146614514_3667603706694587_3398433583453744902_n.jpg);
+}
+
+
+.announceSection .announceCard .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+
+.announceCard .announceCard-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+.announceCard .announceText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  padding-top: 30px;
+
+}
+
+.announceCard .announceText .title{
+  color: black;
+}
+
+.announceCard .readBtn {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 70vh;
-  background-color: #fff;
-  position: relative;
 }
 
-.announcement h2 {
-  position: absolute;
-  top: 5%;
-  color: #94258e;
-}
-
-.announceBox {
-  height: 400px;
-  width: 300px;
-  margin: 0 70px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  text-align: center;
+.announceCard .readBtn button {
+  background-color: purple;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.announceBox:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.readBtn button:hover {
+  background: #6616d0;
 }
 
-.announceBox img {
-  border-radius: 10px 10px 0 0;
+.swiper {
+  width: 950px;
 }
 
-.announceContainer {
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.announceContainer p {
-  font-size: 0.7rem;
-  margin-top: 10px;
-  display: inline-block;
-  color: gray;
-}
-
-
-@media (max-width: 768px) {
-
-  .announcement {
-      height: 150vh;
-  }
-
-  .announceBox {
-      height: 300px;
-      width: 200px;
-      margin: 10px 0;
-  }
-
-  .announceContainer h6 {
-      font-size: 0.7rem;
-      margin-top: 5px;
-  }
-
-  .announceContainer p {
-      font-size: 0.5rem;
-      color: gray;
-  }
-
-  .announcement h2 {
-      position: absolute;
-      top: 1%;
-  }
-
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: purple;
 }
 
 /* ---Footer Section--- */
@@ -343,23 +269,24 @@ footer h3 span {
 
 @media (max-width: 768px) {
   .social-media img {
-      width: 30px;
-      cursor: pointer;
+    width: 30px;
+    cursor: pointer;
   }
 
   #fb {
-      margin-right: 10px;
+    margin-right: 10px;
   }
 
   footer h3 {
-     font-size: 1rem;
+    font-size: 1rem;
   }
-  
+
   footer h3 span {
-      font-size: 0.5rem;
+    font-size: 0.5rem;
   }
 
 }
+
 
 
 /* ---ADUAN SECTION--- */
