@@ -46,10 +46,15 @@
 		
 		$in_email = $_GET['email'];
 		$in_email = '"'.addslashes($in_email).'"';
+
+		$in_title = $_GET['reporttitle'];
+		$in_title = '"'.addslashes($in_title).'"'; 
 		
 		
 		$in_content = $_GET['content'];
 		$in_content = "'".addslashes($in_content)."'";
+
+		$datereceived = "'".addslashes(date('Y-m-d'))."'";
 
 	include "create_conn.php";
 
@@ -67,12 +72,15 @@
 		//$phone = "USER_PHONE";
 		$email = "USER_EMAIL";
 		$content = "REPORT_CONTENT";
+		$daterec = "DATE_RECEIVED";
+		$title = "report_title";
+		
 
 		/*$sql = "INSERT INTO ".$table." (".$name.", ".$matric.", ".$school.", ".$phone.", ".$email.", ".$content.") 
 		VALUES (".$in_name.", ".$in_matric.", ".$in_school.", ".$in_phone.", ".$in_email.", ".$in_content.")";*/
 		
-		$sql = "INSERT INTO ".$table." (".$name.", ".$matric.", ".$school.", ".$email.", ".$content.") 
-		VALUES (".$in_name.", ".$in_matric.", ".$in_school.", ".$in_email.", ".$in_content.")";
+		$sql = "INSERT INTO ".$table." (".$name.", ".$matric.", ".$school.", ".$email.", ".$content.", ".$title.", ".$daterec.") 
+		VALUES (".$in_name.", ".$in_matric.", ".$in_school.", ".$in_email.", ".$in_content.", ".$in_title.", ".$datereceived.")";
 		
 		if ($conn->query($sql) === FALSE) {
 		  echo "Error: " . $sql . "<br>" . $conn->error . "<br>";

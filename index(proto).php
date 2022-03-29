@@ -37,6 +37,8 @@ Input report:
 </div>
 </form>
 
+<?php echo date("Y-m-d"); ?>
+
 
 </body>
 </html>
