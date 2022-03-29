@@ -5,225 +5,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majlis Perwakilan Pelajar USM</title>
-
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <title>Majlis Perwakilan Pelajar USM</title>
 </head>
 
 <body>
+
+    <!-- === NAVIGATION BAR === -->
     <nav class="navbar">
-        <!-- LOGO -->
         <div class="logo">
             <img src="images/LOGO POSTER.png" alt="">
         </div>
-        <!-- NAVIGATION MENU -->
+
         <ul class="nav-links">
-            <!-- USING CHECKBOX HACK -->
-            <input type="checkbox" id="checkbox_toggle" />
+            <input type="checkbox" id="checkbox_toggle">
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <!-- NAVIGATION MENUS -->
             <div class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aduan.html">Aduan</a></li>
-                <li><a href="/">About Us</a></li>
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="aduan.html">Aduan</a> </li>
+                <li> <a href="bantuan.html">Bantuan</a> </li>
+                <li> <a href="">Direktori</a> </li>
             </div>
         </ul>
     </nav>
 
-    <!-- --- CAROUSEL --- -->
+    <!-- === HERO SECTION === -->
+    <section class="hero-section">
+        <div class="hero">
 
-    <section class="carousel">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" id="slide-1">
-                    <div class="container">
-                        <div class="carousel-caption text-start">
-                            <!-- <h1>Example headline.</h1>
-                        <p>Some representative placeholder content for the first slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" /></svg>
-
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" /></svg>
-
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </section>
 
-    <!-- --- SERVICE SECTION --- -->
+
+    <!-- === SERVICE SECTION=== -->
+
     <section class="service">
-        <div class="boxs">
-            <div class="box">
-                <img src="images/advertisement.png" alt="" class="icon">
-                <h2><strong>Announcements</strong></h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
-            </div>
-            <div class="box">
-                <img src="images/review.png" alt="" class="icon">
-                <h2><strong>Announcements</strong> </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
-            </div>
-            <div class="box" id="box3">
-                <img src="images/users-avatar.png" alt="" class="icon">
-                <h2><strong>Announcements</strong></h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
-            </div>
-        </div>
-    </section>
+        <h1>Our Services</h1>
 
-
-    <!-- ----Announcement Section--- -->
-    <section class="announcement">
-        <h2>Announcements</h2>
-        <div class="boxs">
-            <div class="announceBox">
-                <img src="images/146614514_3667603706694587_3398433583453744902_n.jpg" alt="Avatar" style="width:100%">
-                <div class="announceContainer">
-                    <h6>
-                        <strong>
-                            7 Skills of Highly Effective
-                            Programmers
-                        </strong>
-                    </h6>
-
-                    <p>
-                        Our team was inspired by the seven skills of
-                        highly effective programmers created by the
-                        TechLead. We wanted to provide our own
-                        take on the topic...
-                    </p>
-
-                    <h6>
-                        <a href="">Read more →</a>
-                    </h6>
+        <div class="row">
+            <div class="col">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-people-group"></i>
                 </div>
+                <h3>Directory</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
+                    reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
+                    eligendi quasi explicabo.</p>
             </div>
 
-            <div class="announceBox">
-                <img src="images/146614514_3667603706694587_3398433583453744902_n.jpg" alt="Avatar" style="width:100%">
-                <div class="announceContainer">
-                    <h6>
-                        <strong>
-                            7 Skills of Highly Effective
-                            Programmers
-                        </strong>
-                    </h6>
-
-                    <p>
-                        Our team was inspired by the seven skills of
-                        highly effective programmers created by the
-                        TechLead. We wanted to provide our own
-                        take on the topic...
-                    </p>
-
-                    <h6>
-                        <a href="">Read more →</a>
-                    </h6>
+            <div class="col" onclick="location.href='aduan.html';">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-flag"></i>
                 </div>
+                <h3>Complaint</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
+                    reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
+                    eligendi quasi explicabo.</p>
             </div>
 
-            <div class="announceBox">
-                <img src="images/146614514_3667603706694587_3398433583453744902_n.jpg" alt="Avatar" style="width:100%">
-                <div class="announceContainer">
-                    <h6>
-                        <strong>
-                            7 Skills of Highly Effective
-                            Programmers
-                        </strong>
-                    </h6>
 
-                    <p>
-                        Our team was inspired by the seven skills of
-                        highly effective programmers created by the
-                        TechLead. We wanted to provide our own
-                        take on the topic...
-                    </p>
-
-                    <h6>
-                        <a href="">Read more →</a>
-                    </h6>
+            <div class="col" onclick="location.href='bantuan.html';">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-hand-holding-hand"></i>
                 </div>
+                <h3>Bantuan</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
+                    reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
+                    eligendi quasi explicabo.</p>
             </div>
-
 
         </div>
     </section>
 
 
-    <!-- ---FOOTER--- -->
-    <footer>
-        <h3>Majlis Perwakilan Pelajar <br> <span>Universiti Sains Malaysia </span> </h3>
-        <div class="social-media">
-            <img src="images/facebook.png" alt="" id="fb" >
-            <img src="images/instagram.png" alt="">
+    <section class="announcements">
+        <h3>Announcements</h3>
+
+        <div class="announce-container">
+            <div class="announce-box">
+                <div class="announce-img">
+                    <img src="images/146614514_3667603706694587_3398433583453744902_n.jpg" alt="">
+                </div>
+
+                <div class="announce-text">
+                    <span>27 March 2022</span>
+                    <a href="" class="announce-title">Announcement Title</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere earum eius mollitia! Unde
+                        laudantium repudiandae omnis hic, alias eveniet fugit voluptates fuga aut deserunt praesentium
+                        optio? At, molestias et.</p>
+                    <a href="">Read More</a>
+                </div>
+
+            </div>
+
+            <div class="announce-box">
+                <div class="announce-img">
+                    <img src="images/146614514_3667603706694587_3398433583453744902_n.jpg" alt="">
+                </div>
+
+                <div class="announce-text">
+                    <span>27 March 2022</span>
+                    <a href="" class="announce-title">Announcement Title</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere earum eius mollitia! Unde
+                        laudantium repudiandae omnis hic, alias eveniet fugit voluptates fuga aut deserunt praesentium
+                        optio? At, molestias et.</p>
+                    <a href="">Read More</a>
+                </div>
+
+            </div>
+
+            <div class="announce-box">
+                <div class="announce-img">
+                    <img src="images/146614514_3667603706694587_3398433583453744902_n.jpg" alt="">
+                </div>
+
+                <div class="announce-text">
+                    <span>27 March 2022</span>
+                    <a href="" class="announce-title">Announcement Title</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facere earum eius mollitia! Unde
+                        laudantium repudiandae omnis hic, alias eveniet fugit voluptates fuga aut deserunt praesentium
+                        optio? At, molestias et.</p>
+                    <a href="">Read More</a>
+                </div>
+
+            </div>
         </div>
-    </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+
+    </section>
+
+
+    <!-- === FOOTER === -->
+
+    <section class="footer">
+        <h4>Majlis Perwakilan Pelajar</h4>
+        <p>Universiti Sains Malaysia</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </section>
+
+
+
 </body>
 
 </html>
