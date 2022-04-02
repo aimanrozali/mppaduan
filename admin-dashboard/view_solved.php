@@ -110,60 +110,7 @@ $conn->close();
 							<td><?php echo $row['report_title']; ?></td>
                           </tr>
                             <?php } ?>
-                          <!-- <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						   <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                          </tr>
-						   <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>003</td>
-							<td>21/02/2022</td>
-                            <td>Kondo</td>
-							<td>Sponsorship</td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>004</td>
-							<td>21/02/2022</td>
-                            <td>Flash</td>
-							<td>Charity Event</td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr> -->
+                          
                         </tbody>
                       </table>
                        

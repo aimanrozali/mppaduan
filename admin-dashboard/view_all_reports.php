@@ -121,69 +121,7 @@ $conn->close();
                 } ?>
                           </tr>
                           <?php } ?>
-                          <!-- <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                            <td><label class="badge badge-success">Completed</label></td>
-                          </tr>
-						   <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                            <td><label class="badge badge-danger">Pending</label></td>
-                          </tr>
-						   <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                            <td><label class="badge badge-danger">Pending</label></td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>002</td>
-							<td>21/02/2022</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                            <td><label class="badge badge-danger">Pending</label></td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>003</td>
-							<td>21/02/2022</td>
-                            <td>Kondo</td>
-							<td>Sponsorship</td>
-                            <td><label class="badge badge-danger">Pending</label></td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>004</td>
-							<td>21/02/2022</td>
-                            <td>Flash</td>
-							<td>Charity Event</td>
-                            <td><label class="badge badge-danger">Pending</label></td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                            <td><label class="badge badge-success">Completed</label></td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><label class="badge badge-success">Completed</label></td>
-                          </tr>
-                          <tr data-url="report.php">
-                            <td>001</td>
-							<td>21/02/2022</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><label class="badge badge-success">Completed</label></td>
-                          </tr> -->
+                          
                         </tbody>
                       </table>
                     </div>

@@ -31,6 +31,7 @@ if(!isset($_SESSION['success'])){
 	
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
+    
   </head>
   <body>
     <div class="container-scroller">
@@ -48,36 +49,43 @@ if(!isset($_SESSION['success'])){
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Announcement Registration</h4>
-                    <form class="forms-sample" id="forms-popup" method="post" action="#">
+                    <form class="forms-sample" id="forms-popup" method="post" action="announceAdd.php" enctype="multipart/form-data">
                       <div class="form-group">
                         <label for="exampleInputUsername1">Title: </label>
-                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Title">
+                        <input type="text" name="title" class="form-control" id="title" placeholder="Title">
                       </div>
                       <div class="form-group">
                         <label for="exampleTextarea1">Description: </label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="20" placeholder="Description"></textarea>
+                        <textarea class="form-control" name="summary" id="summary" rows="20" placeholder="Description"></textarea>
                       </div> 
-                    </form>
-					<div class = "row">
-					<button class="btn btn-primary mr-2" id = "popup-confirm-form" value="submit">Submit</button>
-					<a href="announce_main.php"><button class="btn btn-dark">Cancel</button></a>
-
-                  </div>
-                  </div>
-                </div>
-              </div> 
-           
-               <div class="col-md-5 grid-margin stretch-card">
+                      <div class="form-group">
+                        <label for="exampleTextarea1">Content: </label>
+                        <textarea class="form-control" name="content" id="content" rows="20" placeholder="Description"></textarea>
+                      </div>
+                      <div class="col-md-5 grid-margin stretch-card">
                 <div class="card ">
                   <div class="card-body">
                       <div class="drop-zone">
                        <span class="drop-zone__prompt">Drop image here or click to upload</span>
-                           <input type="file" name="myFile" class="drop-zone__input">
+                           <input type="file" name="image" id="uploadImage" accept="image/*" class="drop-zone__input">
                     </div>
+                    <div id="preview"><img src="filed.png" /></div><br>
                     <div>
 					
                   </div>
                 </div>
+                    
+					<div class = "row">
+					<input class="btn btn-primary mr-2" id="btn" value="submit" type="submit"></input>
+          </div>
+          </form>
+          <div id="err"></div>
+                  
+                  </div>
+                </div>
+              </div> 
+           
+               
               </div>
 
                </div>
@@ -111,6 +119,8 @@ if(!isset($_SESSION['success'])){
 	<script src="assets/js/date.js"></script>
 	<script src="assets/js/table-hover.js"></script>
 	<script src="assets/js/popup-confirm-form.js"></script>
+  <script type="text/javascript" src="annSubmit.js"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- End custom js for this page -->
 	
   </body>
