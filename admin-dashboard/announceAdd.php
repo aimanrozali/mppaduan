@@ -7,7 +7,7 @@ session_start();
     {
 
       $valid_extensions = array('jpeg', 'jpg', 'png'); // Accepted file ext
-    $path = 'images/announcement/'; // Upload dir
+    $path = '/site/wwwroot/admin-dashboard/images/announcement'; // Upload dir
 
     $img = $_FILES['image']['name'];
     $tmp = $_FILES['image']['name'];
