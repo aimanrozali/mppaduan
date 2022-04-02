@@ -67,16 +67,15 @@ if(!isset($_SESSION['success'])){
                   <div class="card-body">
                       <div class="drop-zone">
                        <span class="drop-zone__prompt">Drop image here or click to upload</span>
-                           <input type="file" name="image" id="uploadImage" accept="image/*" class="drop-zone__input">
+                           <input type="file" name="image" id="uploadImage" class="drop-zone__input">
                     </div>
-                    <div id="preview"><img src="filed.png" /></div><br>
                     <div>
 					
                   </div>
                 </div>
                     
 					<div class = "row">
-					<input class="btn btn-primary mr-2" id="btn" value="submit" type="submit"></input>
+					<input class="btn btn-primary mr-2" onclick="data()" value="submit" type="submit"></input>
           </div>
           </form>
           <div id="err"></div>
