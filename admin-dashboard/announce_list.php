@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_GET['add'])){
+if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
 }
@@ -135,7 +135,7 @@ if(!isset($_GET['add'])){
                     <div class="table-responsive-fullscreen">
                       <table class="table table-hover">
 					   <thead>
-                          <tr data-url="">
+                          <tr data-url="#">
                             <th>ID</th>
                             <th>Date</th>
                             <th>Title</th>
@@ -148,87 +148,7 @@ if(!isset($_GET['add'])){
                             <td>Dave</td>
 							<td>Complaint about Desa</td>
 							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td> </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-						  <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-                          <tr class="popup-confirm">
-                            <td>002</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-                          <tr class="popup-confirm">
-                            <td>003</td>
-                            <td>Kondo</td>
-							<td>Sponsorship</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-                          <tr class="popup-confirm">
-                            <td>004</td>
-                            <td>Flash</td>
-							<td>Charity Event</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-                          <tr class="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>
-                          </tr>
-                          <tr id="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
-                          <tr id="popup-confirm">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-							<td><p class="td-elipses">asdsadsadsjdksaj kjsakldsa lkdkljdklsaj sakld asjd saklj dklsajlkj lkasjld alskjdl asl asd sasadsadasd asdas das asd assa sad as das dasdas about Desa<p></td>                          </tr>
+						  
                         </tbody>
                       </table>
 					  </div>

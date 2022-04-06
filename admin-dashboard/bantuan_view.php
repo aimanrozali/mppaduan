@@ -5,6 +5,15 @@ if(!isset($_SESSION['success'])){
 	exit;
 }
 ?>
+<?php
+  include "../create_conn.php";
+  $id = $_GET['bantuanId'];
+  $sql = "SELECT * FROM bantuan WHERE id='$id'";
+  $exec = $conn->query($sql);
+  $bantuan = $exec->fetch_assoc();
+  $conn->close();
+ 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,9 +60,9 @@ if(!isset($_SESSION['success'])){
                     </p>
                     <h4 class="card-title">Bantuan Details</h4>
 						<blockquote class="blockquote blockquote-primary h-55 my-n2" >
-						<div class="my-n2 sticky py-sm-2"><h4>Organize Event </h4></div> 
+						<div class="my-n2 sticky py-sm-2"><h4><?= $bantuan['title'] ?></h4></div> 
 						<div>
-                      <p class= "scrolly-145">Want to organize an event at Tekun</p> 
+                      <p class= "scrolly-145"><?= $bantuan['description'] ?></p> 
 					  </div>
                     </blockquote>
 					
@@ -71,12 +80,12 @@ if(!isset($_SESSION['success'])){
 					<div class="row  mt-2">
 					<div class = "col-6">
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25" > Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25" ><?= $bantuan['dateOpen'] ?></p>
                     </blockquote>
 					</div>
 					<div class = "col-6">
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Dani Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"><?= $bantuan['dateClosed'] ?></p>
                     </blockquote>
 					</div>
 					</div>
@@ -84,7 +93,7 @@ if(!isset($_SESSION['success'])){
 					<p class="card-description"> Link:
                     </p>
                     <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Alif Danial Marzuki</p>
+                      <p class="my-n2-5 scrolly-25"><?= $bantuan['link'] ?></p>
                     </blockquote>					
 					</div>
                 </div>
@@ -95,12 +104,12 @@ if(!isset($_SESSION['success'])){
                     <h6 class="card-description mb-3">Image:</h6>
 					                    <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel mb-4-5" id="owl-carousel-basic">
                       <div class="item">
-                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
+                        <img src="<?= $bantuan['pic'] ?>" alt="" class="w-100">
                       </div>
                     </div>
                     <div>
 				  <button class="btn btn-primary btn-block my-3"><h4 class="card-title w-100 my-1">Edit Details</h4> <span class="mdi mdi-pencil"></span></button>
-				  <button class="btn btn-danger btn-block my-3"><h4 class="card-title w-100 my-1">Delete Bantuan</h4> <span class="mdi mdi-delete"></span></button>
+				  <button class="btn btn-danger btn-block my-3"><h4 class="card-title w-100 my-1" id="delete"><a href="<?php echo htmlspecialchars("updateBantuan.php?"."deleteId=".$bantuan['id']); ?>">Delete Bantuan</h4> <span class="mdi mdi-delete"></span></button>
                   </div>
                 </div>
               </div>

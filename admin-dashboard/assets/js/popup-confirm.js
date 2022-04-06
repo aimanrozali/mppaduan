@@ -1,5 +1,3 @@
-
-
 function CustomConfirm() {
   this.alert = function (message, title) {
 
@@ -23,6 +21,7 @@ function CustomConfirm() {
     } else {
       document.getElementById('dialogboxhead-success').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> ' + title;
     }
+
     document.getElementById('dialogboxbody-success').innerHTML = message;
     document.getElementById('dialogboxfoot-success').innerHTML = '<button class="pure-material-button-contained btn-success active" onclick="customConfirm.ok()">Solved</button> <button class="pure-material-button-contained btn-danger active" onclick="customConfirm.cancel()">Not Yet</button>';
 
@@ -30,27 +29,20 @@ function CustomConfirm() {
   }
 
   this.ok = function () {
-
     document.getElementById('dialogbox-success').style.display = "none";
     document.getElementById('dialogoverlay').style.display = "none";
-    /*$("#popup-success").toggleClass('btn-danger btn-success');
-    document.getElementById("popup-success").innerHTML = "SOLVED";*/
-    //Reload to fetch updated data 
-    document.location.reload(true);
+    //Redirect to update unsolved report
+    window.location.replace("report_to_solve.php?click=1");
   }
-  this.cancel = function () {
 
+  this.cancel = function () {
     document.getElementById('dialogbox-success').style.display = "none";
     document.getElementById('dialogoverlay').style.display = "none";
   }
 }
 
 let customConfirm = new CustomConfirm();
-document.getElementById("popup-confirm").setAttribute('onclick', 'customConfirm.alert("The Case is Solved?")');
-
-
-
-
+document.getElementById("popup-confirm").setAttribute('onclick', 'customConfirm.alert("Has the report been solved?")');
 
 
 

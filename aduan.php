@@ -15,22 +15,7 @@
 
 <body>
   <!-- === NAVIGATION BAR === -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/LOGO POSTER.png" alt="">
-    </div>
-
-    <ul class="nav-links">
-      <input type="checkbox" id="checkbox_toggle">
-      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-      <div class="menu">
-        <li> <a href="index.html">Home</a> </li>
-        <li> <a href="aduan.html">Aduan</a> </li>
-        <li> <a href="bantuan.html">Bantuan</a> </li>
-        <li> <a href="direktori.html">Direktori</a> </li>
-      </div>
-      </div>
-  </nav>
+  <?php include "nav.php"; ?>
 
 
   <!-- --- ADUAN SECTION--- -->
@@ -113,14 +98,8 @@
 
   <!-- === FOOTER === -->
 
-  <section class="footer">
-    <h4>Majlis Perwakilan Pelajar</h4>
-    <p>Universiti Sains Malaysia</p>
-    <div class="icons">
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-instagram"></i>
-    </div>
-  </section>
+  <?php include "footer.php"; ?>
+
 </body>
 
 </html>

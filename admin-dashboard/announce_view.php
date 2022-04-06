@@ -4,6 +4,13 @@ if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
 }
+
+include "../create_conn.php";
+$id = $_GET['view'];
+$sql = "SELECT * FROM announcement WHERE id='$id'";
+$result = $conn->query($sql);
+$rows = $result->fetch_assoc();
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,25 +53,32 @@ if(!isset($_SESSION['success'])){
              <div class="row">
 			 			   <div class="col-md-7 grid-margin stretch-card">
                 <div class="card">
+                  <div id="viewContainer">
                   <div class="card-body">
 				  <p class="card-description my-n1"> </p>
                     <h4 class="card-title">Announcement Details</h4>
 					<p class="card-description"> Date: </p>
 					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> 02/02/22</p>
+                      <p class="my-n2-5 scrolly-25"> <?php echo $rows['publishDate']; ?></p>
                     </blockquote>
 					
                     <p class="card-description mt-4"> Title:
                     </p>
                     <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> Organizing event at campus</p>
+                      <p class="my-n2-5 scrolly-25"> <?php echo $rows['title']; ?></p>
+                    </blockquote>
+
+                    <p class="card-description mt-4"> Summary:
+                    </p>
+                    <blockquote class="blockquote h-8 my-n2">
+                      <p class="my-n2-5 scrolly-25"> <?php echo $rows['summary']; ?></p>
                     </blockquote>
 					
 					
 						<p class="card-description mt-4">Description:
                     </p>
 						<blockquote class="blockquote blockquote-primary h-53 my-n2" >
-                      <p class= "scrolly-145">Want to organize an event at Tekun</p> 
+                      <p class= "scrolly-145"><?php echo $rows['content']; ?></p> 
                     </blockquote>
 					</div>
                 </div>
@@ -75,15 +89,17 @@ if(!isset($_SESSION['success'])){
                     <h6 class="card-description mb-3">Image:</h6>
 					                    <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel mb-4-5" id="owl-carousel-basic">
                       <div class="item">
-                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
+                        <img src="<?php echo $rows['pic']; ?>" alt="" class="w-100">
                       </div>
                     </div>
                     <div>
-				  <button class="btn btn-primary btn-block my-3"><h4 class="card-title w-100 my-1">Edit Announcement</h4> <span class="mdi mdi-pencil"></span></button>
-				  <button class="btn btn-danger btn-block my-3"><h4 class="card-title w-100 my-1">Delete Announcement</h4> <span class="mdi mdi-delete"></span></button>
+				  <button class="btn btn-primary btn-block my-3"><h4 class="card-title w-100 my-1"><a href="<?php echo htmlspecialchars("updateFormAnn.php?"."editId=".$rows['id']); ?>">Edit Announcement</a></h4> <span class="mdi mdi-pencil"></span></button>
+
+				  <button class="btn btn-danger btn-block my-3"><h4 class="card-title w-100 my-1" id="delete"><a href="<?php echo htmlspecialchars("updateAnn.php?"."deleteId=".$rows['id']); ?>">Delete Announcement</a></h4> <span class="mdi mdi-delete"></span></button>
                   </div>
                 </div>
               </div>
+</div>
 
                </div>
           </div>
@@ -114,6 +130,7 @@ if(!isset($_SESSION['success'])){
     <script src="assets/js/dashboard.js"></script>
 	<script src="assets/js/date.js"></script>
 	<script src="assets/js/table-hover.js"></script>
+  <script type="text/javascript" src="announceUpdate.js"></script>
     <!-- End custom js for this page -->
 	
   </body>

@@ -48,32 +48,32 @@ if(!isset($_SESSION['success'])){
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Bantuan Registration</h4>
-                    <form class="forms-sample" id="forms-popup" method="post" action="#">
+                    <form class="forms-sample" id="formsbantuan" method="post" action="bantuanAdd.php" enctype="multipart/form-data">
 					 <div class="form-group">
                         <label for="exampleInputEmail1">Title:</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <input type="text" class="form-control" name="title" id="title" placeholder="Title">
                       </div> 
 					  <div class="form-group">
                         <label for="exampleTextarea1">Description: </label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="9" placeholder="Description"></textarea>
+                        <textarea class="form-control" id="description" name="description" rows="9" placeholder="Description"></textarea>
                       </div>
 					  <div class = "row">
                       <div class="form-group col-md-6">
                         <label for="exampleInputUsername1">Date Open: </label>
-						<input type="date" class="form-control" id="dateopen" name="open">
+						<input type="date" class="form-control" id="dateOpen" name="dateOpen">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="exampleInputUsername1">Date Close:</label>
-						<input type="date" class="form-control" id="dateclose" name="close">
+						<input type="date" class="form-control" id="dateClosed" name="dateClosed">
                       </div>
                       </div>
 					  
 					  <div class="form-group">
                         <label for="exampleInputUsername1">Link:</label>
-						<input type="text" class="form-control" id="exampleInputUsername1" placeholder="adminname">
+						<input type="text" class="form-control" id="link" name="link" placeholder="Link">
                       </div>
                      
-                    </form>
+                    
 					<div class = "row">
 					<button class="btn btn-primary mr-2" id = "popup-confirm-form" value="submit">Submit</button>
 					<a href="bantuan_main.php"><button class="btn btn-dark">Cancel</button></a>
@@ -88,12 +88,13 @@ if(!isset($_SESSION['success'])){
                   <div class="card-body">
                       <div class="drop-zone">
                        <span class="drop-zone__prompt">Drop image here or click to upload</span>
-                           <input type="file" name="myFile" class="drop-zone__input">
+                           <input type="file" name="image" id="image" class="drop-zone__input">
                     </div>
                     <div>
 					
                   </div>
                 </div>
+                </form>
               </div>
 
                </div>
@@ -129,6 +130,7 @@ if(!isset($_SESSION['success'])){
 	<script src="assets/js/table-hover.js"></script>
 	<script src="assets/js/popup-confirm.js"></script>
 	<script src="assets/js/popup-add-announce.js"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
 
     <!-- End custom js for this page -->
 	

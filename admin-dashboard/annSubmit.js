@@ -8,6 +8,7 @@ $(document).ready(function (e) {
       contentType: false, cache: false, processData: false,
       success: function (data) {
         alert("Data inserted");
+        $("#forms-popup")[0].reset();
       },
       error: function () { }
     });

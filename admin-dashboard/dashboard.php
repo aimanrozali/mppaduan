@@ -1,24 +1,26 @@
 <?php
 session_start();
+
 if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
 }
 ?>
 <?php
-              include "../create_conn.php";
-              $sqlsov = "SELECT COUNT(*) AS totals FROM report WHERE resolved='1'";
-              $sqlusov = "SELECT COUNT(*) AS totalu FROM report WHERE resolved='0'";
-              $sqltd = "SELECT COUNT(*) AS totaltoday FROM report WHERE DATE(DATE_RECEIVED)";
-              $resultsov = $conn->query($sqlsov);
-              $resultusov = $conn->query($sqlusov);
-              $resulttd = $conn->query($sqltd);
-              $conn->close();
-              $data3 = $resulttd->fetch_assoc();
-              
-              ?>
-              <?php $data1 = $resultsov->fetch_assoc();?>
-              <?php $data2 = $resultusov->fetch_assoc();?>
+  $date = date("Y-m-d");
+  include "../create_conn.php";
+  $sqlsov = "SELECT COUNT(*) AS totals FROM report WHERE resolved='1'";
+  $sqlusov = "SELECT COUNT(*) AS totalu FROM report WHERE resolved='0'";
+  $sqltd = "SELECT COUNT(*) AS totaltoday FROM report WHERE DATE_RECEIVED='$date'";
+  $resultsov = $conn->query($sqlsov);
+  $resultusov = $conn->query($sqlusov);
+  $resulttd = $conn->query($sqltd);
+  $conn->close();
+  $data3 = $resulttd->fetch_assoc(); 
+?>
+<?php $data1 = $resultsov->fetch_assoc();?>
+<?php $data2 = $resultusov->fetch_assoc();?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,108 +65,122 @@ if(!isset($_SESSION['success'])){
                           <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                         </div>
                       </div>
-					  <div class="col-3">
+
+                      <div class="col-3">
                         <div class="icon icon-box-info" >
-						<span class="mdi mdi-calendar-clock"></span>
+						              <span class="mdi mdi-calendar-clock"></span>
                         </div>
                       </div>
                     </div>
+
                     <h6 class="text-muted font-weight-normal " id = "date1"></h6>
                   </div>
                 </div>
               </div>
             
-			  <div class="col-xl-4 col-sm-6 grid-margin stretch-card" id = "today-card">
+			        <div class="col-xl-4 col-sm-6 grid-margin stretch-card" id = "today-card">
                 <div class="card hover">
-				<a href="view_unsolved.php">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0"><?= $data3['totaltoday'] ?></h3>
+				          <a href="view_unsolved.php">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-9">
+                          <div class="d-flex align-items-center align-self-start">
+                            <h3 class="mb-0"><?= $data3['totaltoday'] ?></h3>
+                          </div>
+                        </div>
+                          
+                        <div class="col-3">
+                          <div class="icon icon-box-danger">
+                            <span class="mdi mdi-pencil-box"></span>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-danger">
-                          <span class="mdi mdi-pencil-box"></span>
-                        </div>
-                      </div>
+
+                      <h6 class="text-muted font-weight-normal">Total Reports Today</h6>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Total Reports Today</h6>
-                  </div>
+                  </a>
                 </div>
-				</a>
               </div>
 			  
-			  <div class="col-xl-4 col-sm-6 grid-margin stretch-card" id = "unsolved-card">
+              <div class="col-xl-4 col-sm-6 grid-margin stretch-card" id = "unsolved-card">
                 <div class="card hover">
-				<a href="view_unsolved.php">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0"><?= $data2['totalu'] ?></h3>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">+<?= $data2['totalu']-$data3['totaltoday'] ?></p>
+                  <a href="view_unsolved.php">
+                    <div class="card-body">
+                      <div class="row">
+
+                        <div class="col-9">
+                          <div class="d-flex align-items-center align-self-start">
+                            <h3 class="mb-0"><?= $data2['totalu'] ?></h3>
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+
+                          <?php if ($data2['totalu'] > 0) { ?>
+                            <div class="icon icon-box-danger">
+                              <span class="mdi mdi-arrow-top-right"></span>
+                            </div>
+                          <?php } else { ?>
+                            <div class="icon icon-box-success">
+                              <span class="mdi mdi-minus"></span>
+                            </div>
+                          <?php } ?>
+
                         </div>
                       </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-danger">
-                          <span class="mdi mdi-arrow-top-right"></span>
-                        </div>
-                      </div>
+                      <h6 class="text-muted font-weight-normal">Total Reports Unsolved</h6>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Total Reports Unsolved</h6>
-                  </div>
+                  </a>
                 </div>
-				</a>
               </div>
-			  
             </div>
-            
-              
+             
             <div class="row">
                <div class="col-md-4 grid-margin stretch-card">
                 <div class="card ">
                   <div class="card-body">
                     <h4 class="card-title">Reports Statistic</h4>
                     <canvas id="transaction-history" class="transaction-chart"></canvas>
-					<a href="view_unsolved.php">
-                    <div class="d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3 danger-hover">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Total Unsolved</h6>
-                      </div>
-                      <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0" ><?php echo($data2['totalu']);?></h6>
-                      </div>
-                    </div>
-					</a>
-					<a href="view_solved.php">
-                    <div class="d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3 success-hover">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Total Solved</h6>
-                      </div>
-                      <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0" ><?php echo($data1['totals']);?></h6>
-                      </div>
-                    </div>
-					</a>
+
+					            <a href="view_unsolved.php">
+                        <div class="d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3 danger-hover">
+                          <div class="text-md-center text-xl-left">
+                            <h6 class="mb-1">Total Unsolved</h6>
+                          </div>
+                          <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                            <h6 class="font-weight-bold mb-0" ><?php echo($data2['totalu']);?></h6>
+                          </div>
+                        </div>
+					            </a>
+
+					            <a href="view_solved.php">
+                        <div class="d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3 success-hover">
+                          <div class="text-md-center text-xl-left">
+                            <h6 class="mb-1">Total Solved</h6>
+                          </div>
+                          <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                            <h6 class="font-weight-bold mb-0" ><?php echo($data1['totals']);?></h6>
+                          </div>
+                        </div>
+				            	</a>
                   </div>
                 </div>
               </div>
+
               <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Reports Today</h4>
                     <span class="card-description font-weight-normal" id = "date2"></span>
-					 <span class="card-description font-weight-normal" >, </span>
-					 <span class="card-description font-weight-normal" id = "day"></span>
+                    <span class="card-description font-weight-normal" >, </span>
+                    <span class="card-description font-weight-normal" id = "day"></span>
                     <div class="table-responsive">
-                    <?php
-                      include "../create_conn.php";
-                      $sql = "SELECT * FROM report";
-                      $result = $conn->query($sql);
-                      $conn->close();
-                    ?>
+                      <?php
+                        include "../create_conn.php";
+                        $sql = "SELECT * FROM report WHERE DATE_RECEIVED='$date'";
+                        $result = $conn->query($sql);
+                        $conn->close();
+                      ?>
                       <table class="table table-hover">
                         <thead>
                           <tr data-url="">
@@ -175,34 +191,26 @@ if(!isset($_SESSION['success'])){
                           </tr>
                         </thead>
                         <tbody>
-                          <?php
-                            while($rows=$result->fetch_assoc())
-                            {
-                              
-                          ?>
+                          <?php while($rows=$result->fetch_assoc()) { ?>  
                           <?php
                           //binding address
                             $id = $rows["REPORT_ID"];
                             $url = 'report.php';
                             $url .= '?reportid=';
                             $url .= $id;
-                            ?>
+                          ?>
                           <tr data-url=<?php echo $url; ?>>
                             <td><?php echo $rows['REPORT_ID'];?></td>
                             <td><?php echo $rows['USER_NAME'];?></td>
-							              <td><?php echo $rows['report_title'];?></td>
+                            <td><?php echo $rows['report_title'];?></td>
                             <?php 
-                              if($rows['resolved']==true)
-                              {
-                            echo'<td><label class="badge badge-success">Completed</label></td>';
-                              }
-                            else {
+                              if($rows['resolved']==true) {
+                                echo'<td><label class="badge badge-success">Completed</label></td>';
+                              } else {
                               echo'<td><label class="badge badge-danger">Pending</label></td>';
                               } ?>
                           </tr>
-                          <?php
-                            }
-                          ?>
+                          <?php } ?>
                         </tbody>
                       </table>
                     </div>
@@ -211,11 +219,12 @@ if(!isset($_SESSION['success'])){
               </div> 
             </div>
           </div>
+          
           <script type="text/javascript">var sov= <?= $data1['totals'] ?>;
           var usov = <?= $data2['totalu'] ?>;
           </script>
           <script type="text/javascript" src="assets/js/dashboard.js"></script>
-         
+
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <?php include "footer.php"; ?>
@@ -241,8 +250,8 @@ if(!isset($_SESSION['success'])){
     <!-- Custom js for this page -->
     <script src="assets/js/dashboard.js"> 
     </script>
-	<script src="assets/js/date.js"></script>
-	<script src="assets/js/table-hover.js"></script>
+    <script src="assets/js/date.js"></script>
+    <script src="assets/js/table-hover.js"></script>
     <!-- End custom js for this page -->
 	
   </body>

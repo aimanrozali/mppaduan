@@ -75,7 +75,8 @@ if(!isset($_SESSION['success'])){
                 </div>
                     
 					<div class = "row">
-					<input class="btn btn-primary mr-2" onclick="data()" value="submit" type="submit"></input>
+            <br>
+					<input class="btn btn-primary mr-2" onclick="data()" value="Submit" type="submit"></input>
           </div>
           </form>
           <div id="err"></div>

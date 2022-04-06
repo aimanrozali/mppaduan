@@ -5,6 +5,11 @@ if(!isset($_SESSION['success'])){
 	exit;
 }
 ?>
+<?php
+  include("../create_conn.php");
+  $sql = "SELECT * FROM bantuan";
+  $result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -61,87 +66,22 @@ if(!isset($_SESSION['success'])){
                           </tr>
                         </thead>
                         <tbody>
-                          <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahangjasdkdasjddaskldjasdklsadjsakdljadjdjaskdjaslkdjasdkljasdjaskdjasldjasdlasjdklasjdjaskdljasdadkljaksskaskldjaskjdklasjdkasjdklasjlkasdjk </p> </td>
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
+                          <?php
+                            while($rows=$result->fetch_assoc()){
+                              $id = $rows["id"];
+                              $url = "bantuan_view.php?bantuanId=".$id;
+                              ?>
+                            
+                          <tr data-url=<?= $url ?>>
+                            <td><?= $rows['id'] ?></td>
+                            <td><?= $rows['title'] ?></td>
+							<td> <p class = "overflow-elipses mb-0"><?= $rows['description'] ?></p> </td>
+                            <td><?= $rows['dateOpen'] ?></td>
+							<td><?= $rows['dateClosed'] ?></td>
+							<td><?= $rows['link'] ?></td>
 						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-						  <tr data-url="bantuan_view.php">
-                            <td>001</td>
-                            <td>Bantuan Banjir</td>
-							<td> <p class = "overflow-elipses mb-0">Sukarelawan di Teluk Pahang</td>							
-                            <td>12/01/2021</td>
-							<td>12/02/2021</td>
-							<td>www.usm.my</td>
-						  </tr>
-
+						  <?php }
+              $conn->close(); ?>
                         </tbody>
                       </table>
                     </div>

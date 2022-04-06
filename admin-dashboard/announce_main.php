@@ -46,162 +46,30 @@ if(!isset($_SESSION['success'])){
                <div class="col-md-5 grid-margin stretch-card">
                 <div class="card ">
                    <div class="card-body my-n2">
-                    <h4 class="card-title">Important announcement </h4>
+                    <h4 class="card-title">Announcement </h4>
 					  <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel my-3 " id="owl-carousel-basic">
+            <tr data-url="announce_view.php">
                       <div class="item">
-                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
 						<div>
-                    <div class="d-flex py-4 row">
-					<h6 class="col-9 grid-margin stretch-card preview-subject"> Annoucement Title</h6>
-					<p class="col-2 grid-margin stretch-card text-muted text-small">02/02/02</p>
-                    </div>
-                    <div class="my-n3 row mx-0 my-n4-5">
-					<p class="text-muted overflow-elipses ">sdasd sad asd asd asd asd asd asd asd asd as das dsad asd asd asd asdasdasdsadsadsa asd asd asd asd sad asd asds d02/02/02</p>
-                  </div>
-                  </div>
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/dashboard/Img_5.jpg" alt="">
-						<div>
-                    <div class="d-flex py-4 row">
-					<h6 class="col-9 grid-margin stretch-card preview-subject"> Annoucement Title</h6>
-					<p class="col-2 grid-margin stretch-card text-muted text-small">02/02/02</p>
-                    </div>
-                    <div class="my-n3 row mx-0 my-n4-5">
-					<p class="text-muted overflow-elipses ">!sdasd sad asd asd asd asd asd asd asd asd as das dsad asd asd asd asdasdasdsadsadsa asd asd asd asd sad asd asds d02/02/02</p>
-                  </div>
-                  </div>
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/dashboard/img_6.jpg" alt="">
-						<div>
-                    <div class="d-flex py-4 row">
-					<h6 class="col-9 grid-margin stretch-card preview-subject"> Annoucement Title</h6>
-					<p class="col-2 grid-margin stretch-card text-muted text-small">02/02/02</p>
-                    </div>
-                    <div class="my-n3 row mx-0 my-n4-5">
-					<p class="text-muted overflow-elipses ">sdasd sad asd asd asd asd asd asd asd asd as das dsad asd asd asd asdasdasdsadsadsa asd asd asd asd sad asd asds d02/02/02</p>
-                  </div>
+
+
+                    <?php
+                    include("announceFetch.php");
+                    ?>
+                  
                   </div>
                       </div>
                     </div>
 					
 					
                     <a href="announce_add.php">
-				  <button class="btn btn-primary btn-inline btn-left mr-4 w-45 my-4"><h6 class=" w-100 my-1 text-medium">Edit</h6> </button>
+				  <button class="btn btn-primary btn-inline btn-left mr-4 w-45 my-4"><h6 class=" w-100 my-1 text-medium">Add Annoucement</h6> </button>
 				  </a>
-				  <button class="btn btn-danger btn-inline btn-right w-45 my-4" id="popup-confirm"><h6 class=" w-100 my-1 text-medium">Remove</h6>  </button>
-				  <button class="btn btn-success btn-block" id= "popup-add"><h6 class=" w-100 my-1 text-medium" >Add Important</h6> </button>
                   </div>
                 </div>
               </div>
               <div class="col-md-7 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body my-n2">
-				  <h4 class="card-title w-100">Announcement List</h4>
-                    <div class="table-responsive-full my-n2">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr data-url="">
-                            <th>ID</th>
-                            <th>Date</th>
-                            <th>Title</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-						  <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-                          <tr data-url="announce_view.php">
-                            <td>002</td>
-                            <td>Alice</td>
-							<td>Organise Event</td>
-                          </tr>
-                          <tr data-url="announce_view.php">
-                            <td>003</td>
-                            <td>Kondo</td>
-							<td>Sponsorship</td>
-                          </tr>
-                          <tr data-url="announce_view.php">
-                            <td>004</td>
-                            <td>Flash</td>
-							<td>Charity Event</td>
-                          </tr>
-                          <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-                          <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-                          <tr data-url="announce_view.php">
-                            <td>001</td>
-                            <td>Dave</td>
-							<td>Complaint about Desa</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  <a href="announce_add.php">
-				  <button class="btn btn-success btn-block my-4-2"><h4 class="card-title w-100 my-1">Add Announcement</h4> </button>
-				  </a>
-				  </div>
-				</div>
+                
               </div> 
             </div>
           </div>

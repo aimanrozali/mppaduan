@@ -10691,6 +10691,10 @@ input[type="button"].btn-block {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
+.input-radio-nodisplay {
+  display: none;
+}
+
 .input-group-lg > .form-control:not(textarea), .input-group-lg > .asColorPicker-input:not(textarea), .dataTables_wrapper .input-group-lg > select:not(textarea), .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > input:not(textarea)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > select:not(textarea), .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > input:not(textarea)[type=number], .select2-container--default .input-group-lg > .select2-selection--single:not(textarea), .select2-container--default .select2-selection--single .input-group-lg > .select2-search__field:not(textarea), .input-group-lg > .typeahead:not(textarea),
 .input-group-lg > .tt-query:not(textarea),
@@ -13916,7 +13920,6 @@ button.bg-dark:focus {
 .my-5 {
   margin-top: 3rem !important; }
   
-
 .mr-5,
 .mx-5 {
   margin-right: 3rem !important; }

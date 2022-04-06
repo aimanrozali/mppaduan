@@ -1,5 +1,3 @@
-
-
 (function ($) {
 
   // var sov;
@@ -131,7 +129,7 @@
           ctx.fillStyle = "#6c7293";
 
           var texts = "Total",
-            textsX = Math.round((width - ctx.measureText(text).width) / 2),
+            textsX = Math.round((width - ctx.measureText(text).width) / 2.12),
             textsY = height / 1.7;
 
           ctx.fillText(texts, textsX, textsY);

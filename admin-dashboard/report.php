@@ -1,11 +1,13 @@
 <?php
 session_start();
+
 if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
   error_reporting(-1);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +26,7 @@ if(!isset($_SESSION['success'])){
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/popup.css">
+  	<link rel="stylesheet" href="assets/css/popup.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
   </head>
@@ -36,7 +38,7 @@ if(!isset($_SESSION['success'])){
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
         <?php include "header.php"; ?>
-
+        
         <?php
           include "../create_conn.php";
           $id = $_GET['reportid'];
@@ -44,132 +46,116 @@ if(!isset($_SESSION['success'])){
           $result = $conn->query($sql);
           $rows=$result->fetch_assoc();
           $conn->close();
-          ?>
+
+          //Sent id through session
+          $_SESSION['id'] = $id;
+        ?>
+
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-		  <div class="row">
-		  
-		   <div class="col-md-6 grid-margin stretch-card">
+		        <div class="row">
+		          <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
-                  <div class="card-body">
-				  
-				  <p class="card-description my-n1"> 
-                    </p>
-                    <h4 class="card-title">Sender Details</h4>
-					<p class="card-description mt-3"> Name:
-                    </p>
-                    <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"> <?php echo $rows['USER_NAME']?></p>
-                    </blockquote>
-					
-					<div class="row">
-					<div class = "col-6">
-					<p class="card-description mt-4"> Matric Number:
-                    </p>
-					</div>
-					<div class = "col-6">
-					<p class="card-description mt-4"> School of:
-                    </p>
-					</div>
-					</div>
-					
-					<div class="row  mt-2">
-					<div class = "col-6">
-					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25" > <?php echo $rows['USER_MATRIC']?></p>
-                    </blockquote>
-					</div>
-					<div class = "col-6">
-					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"><?php echo $rows['USER_SCHOOL']?></p>
-                    </blockquote>
-					</div>
-					</div>
-					
-					<p class="card-description"> Email:
-                    </p>
-                    <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"><?php echo $rows['USER_EMAIL']?></p>
-                    </blockquote>
-					
-					<div class="row">
-					<div class = "col-6">
-					<p class="card-description mt-4"> Date Received:
-                    </p>
-					</div>
-					<div class = "col-6">
-					<p class="card-description mt-4"> Date Resolved:
-                    </p>
-					</div>
-					</div>
-					
-					<div class="row  mt-2">
-					<div class = "col-6">
-					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25" ><?php echo $rows['DATE_RECEIVED']?></p>
-                    </blockquote>
-					</div>
-					<div class = "col-6">
-					<blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"><?php echo $rows['DATE_RESOLVED']?></p>
-                    </blockquote>
-					</div>
-					</div>
-					
-				
-							
-                </div>
-                  </div>
-				  
-              </div>
-			  
-			   <div class="col-md-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-				  <p class="card-description my-n1"> </p>
-                    <h4 class="card-title">Reports Details</h4>
-					<p class="card-description"> Status: </p>
-          <?php if($rows['resolved']==false)
-            { ?>
-					<div class = "w-100 my-n3 pb-2">
-					  <button type="button" class="btn btn-danger btn-lg btn-block" id = "popup-confirm">
-                       UNSOLVED
-                    </div>
-                    <?php }
-                    else { ?>
-                    <div class = "w-100 my-n3 pb-2">
-					  <button type="button" class="btn btn-success btn-lg btn-block" >
-                       SOLVED
-                    </div>
-                    <?php } ?>
-                    <p class="card-description mt-4"> Report ID:
-                    </p>
-                    <blockquote class="blockquote h-8 my-n2">
-                      <p class="my-n2-5 scrolly-25"><?php echo $rows['REPORT_ID']?></p>
-                    </blockquote>
-					
-					
-						<p class="card-description mt-4">Description:
-                    </p>
-						<blockquote class="blockquote blockquote-primary h-50 my-n2" >
-						<div class="my-n2 sticky py-sm-2"><h4><?php echo $rows['report_title']?></h4></div> 
-						<div>
-                      <p class= "scrolly-145"><?php echo $rows['REPORT_CONTENT']?></p> 
-					  </div>
-                    </blockquote>
-					</div>
-					
-					
-                    
-				  
-                
-                </div>
-              </div>
-              </div>
-			  
-           
+                  <div class="card-body">		  
+				            <p class="card-description my-n1"> </p>
+                    <h4 class="card-title">Sender Details </h4>
 
+                    	<p class="card-description mt-3"> Name: </p>
+                      <blockquote class="blockquote h-8 my-n2">
+                        <p class="my-n2-5 scrolly-25"> <?php echo $rows['USER_NAME']?></p>
+                      </blockquote>
+					
+				          	<div class="row">
+					            <div class = "col-6">
+					              <p class="card-description mt-4"> Matric Number: </p>
+                      </div>
+                      <div class = "col-6">
+                        <p class="card-description mt-4"> School of: </p>
+                      </div>
+                    </div>
+					
+					          <div class="row  mt-2">
+                      <div class = "col-6">
+                        <blockquote class="blockquote h-8 my-n2">
+                          <p class="my-n2-5 scrolly-25" > <?php echo $rows['USER_MATRIC']?></p>
+                        </blockquote>
+                      </div>
+                      <div class = "col-6">
+                        <blockquote class="blockquote h-8 my-n2">
+                          <p class="my-n2-5 scrolly-25"><?php echo $rows['USER_SCHOOL']?></p>
+                        </blockquote>
+                      </div>
+                    </div>
+					
+					          <p class="card-description"> Email: </p>
+                    <blockquote class="blockquote h-8 my-n2">
+                      <p class="my-n2-5 scrolly-25"><?php echo $rows['USER_EMAIL']?> </p>
+                    </blockquote>
+					
+                    <div class="row">
+                      <div class = "col-6">
+                        <p class="card-description mt-4"> Date Received: </p>
+                      </div>
+                      <div class = "col-6">
+                        <p class="card-description mt-4"> Date Resolved: </p>
+                      </div>
+                    </div>
+                    
+                    <div class="row  mt-2">
+                      <div class = "col-6">
+                        <blockquote class="blockquote h-8 my-n2">
+                          <p class="my-n2-5 scrolly-25" ><?php echo $rows['DATE_RECEIVED']?> </p>
+                        </blockquote>
+                      </div>
+                      <div class = "col-6">
+                        <blockquote class="blockquote h-8 my-n2">
+                          <p class="my-n2-5 scrolly-25"><?php echo $rows['DATE_RESOLVED']?></p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			  
+			        <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+				            <p class="card-description my-n1"> </p>
+                    <h4 class="card-title">Reports Details</h4>
+
+					            <p class="card-description"> Status: </p>
+                      <?php if($rows['resolved']==false) { ?>
+					            <div class = "w-100 my-n3 pb-2">
+					              <button type="button" class="btn btn-danger btn-lg btn-block" id = "popup-confirm"> UNSOLVED </button>
+                      </div>
+                      <?php } else { ?>
+                      <div class = "w-100 my-n3 pb-2">
+                        <a href = "view_all_reports.php">
+					                <button type="button" class="btn btn-success btn-lg btn-block" > SOLVED </button>
+
+                        </a>
+                      </div>
+                      <?php } ?>
+
+                      <p class="card-description mt-4"> Report ID: </p>
+                      <blockquote class="blockquote h-8 my-n2">
+                        <p class="my-n2-5 scrolly-25"><?php echo $rows['REPORT_ID']?></p>
+                      </blockquote>
+					
+                      <p class="card-description mt-4">Description: </p>
+                      <blockquote class="blockquote blockquote-primary h-50 my-n2" >
+                        <div class="my-n2 sticky py-sm-2">
+                          <h4><?php echo $rows['report_title']?></h4>
+                        </div> 
+                        <div>
+                          <p class= "scrolly-145"><?php echo $rows['REPORT_CONTENT']?></p> 
+                        </div>
+                      </blockquote>
+                  </div>
+                </div>
+              </div>         
+            </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
@@ -190,8 +176,7 @@ if(!isset($_SESSION['success'])){
     <script src="assets/js/settings.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-	<script src="assets/js/popup-confirm.js"></script>
+	  <script src="assets/js/popup-confirm.js"></script>
     <!-- End custom js for this page -->
-	
   </body>
 </html>
