@@ -9,7 +9,6 @@ if(!isset($_SESSION['success'])){
 	exit;
 } else {
   include "../create_conn.php";  
-}
 ?>
 
 <script>
@@ -236,3 +235,5 @@ if(!isset($_SESSION['success'])){
 	
   </body>
 </html>
+
+<?php } ?>

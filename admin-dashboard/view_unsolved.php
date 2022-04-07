@@ -8,8 +8,7 @@ if(!isset($_SESSION['success'])){
 	header('location:index.php');
 	exit;
 } else {
-  include "../create_conn.php";
-}  
+  include "../create_conn.php";  
 ?>
 
 <script>
@@ -219,3 +218,5 @@ if(!isset($_SESSION['success'])){
 	
   </body>
 </html>
+
+<?php } ?>
