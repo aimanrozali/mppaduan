@@ -5,7 +5,7 @@ session_start();
 
     $title = input_filter($_POST["title"]);
     $summary = input_filter($_POST["summary"]);
-    $content = input_filter($_POST["content"]);
+    $content = $_POST["content"];
     $datePublish = date("Y/m/d");
     $pic = addPic();
 

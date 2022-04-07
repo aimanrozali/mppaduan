@@ -41,7 +41,6 @@ function delete_data($id,$conn){
   if(file_exists($rows['pic']))
   {
     unlink($rows['pic']);
-    echo "Image deleted";
   }
   else
   {
