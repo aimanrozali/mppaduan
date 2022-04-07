@@ -60,11 +60,11 @@ if(!isset($_SESSION['success'])){
                       </div>
                       <div class="form-group">
                         <label for="exampleTextarea1">Summary: </label>
-                        <textareaMCE class="form-control" name="summary" id="summary" rows="20"><?= $editA['summary'] ?></textareaMCE>
+                        <textarea class="form-control" name="summary" id="summary" rows="20"><?= $editA['summary'] ?></textarea>
                       </div> 
                       <div class="form-group">
                         <label for="exampleTextarea1">Content: </label>
-                        <textarea class="form-control" name="content" id="content" rows="20"><?= $editA['content'] ?></textarea>
+                        <textareaMCE class="form-control" name="content" id="content" rows="20"><?= $editA['content'] ?></textareaMCE>
                       </div>
                       
 					<div class = "row">
