@@ -123,20 +123,21 @@ if(!isset($_SESSION['success'])){
                   <div class="card-body">
 				            <p class="card-description my-n1"> </p>
                     <h4 class="card-title">Reports Details</h4>
-
+                    
 					            <p class="card-description"> Status: </p>
                       <?php if($rows['resolved']==false) { ?>
 					            <div class = "w-100 my-n3 pb-2">
-					              <button type="button" class="btn btn-danger btn-lg btn-block" id = "popup-confirm"> UNSOLVED </button>
-                      </div>
-                      <?php } else { ?>
+					              <button type="button" class="btn btn-danger btn-lg w-93" id = "popup-confirm"> UNSOLVED </button>
+
+                        <?php } else { ?>
                       <div class = "w-100 my-n3 pb-2">
                         <a href = "view_all_reports.php">
-					                <button type="button" class="btn btn-success btn-lg btn-block" > SOLVED </button>
-
+					                <button type="button" class="btn btn-success btn-lg w-93" > SOLVED </button>
                         </a>
-                      </div>
                       <?php } ?>
+
+                      <button type="button" class="btn-danger btn-sm" id = "popup-confirm-delete"><i class="mdi mdi-delete"></i></button>
+                      </div>
 
                       <p class="card-description mt-4"> Report ID: </p>
                       <blockquote class="blockquote h-8 my-n2">
@@ -176,6 +177,7 @@ if(!isset($_SESSION['success'])){
     <script src="assets/js/settings.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
+    <script src="assets/js/popup-confirm-delete.js"></script>
 	  <script src="assets/js/popup-confirm.js"></script>
     <!-- End custom js for this page -->
   </body>
