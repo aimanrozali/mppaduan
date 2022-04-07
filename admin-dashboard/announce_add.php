@@ -8,6 +8,7 @@ if(!isset($_SESSION['success'])){
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <script src="https://cdn.tiny.cloud/1/uyccmfybr5gp0lpj6urgkep0ffgpjqnvawwxxrn4v2nt4brx/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,7 +61,7 @@ if(!isset($_SESSION['success'])){
                       </div> 
                       <div class="form-group">
                         <label for="exampleTextarea1">Content: </label>
-                        <textarea class="form-control" name="content" id="content" rows="20" placeholder="Description"></textarea>
+                        <textareaMCE class="form-control" name="content" id="content" rows="20" placeholder="Description"></textareaMCE>
                       </div>
                       <div class="col-md-5 grid-margin stretch-card">
                 <div class="card ">
@@ -122,6 +123,16 @@ if(!isset($_SESSION['success'])){
   <script type="text/javascript" src="annSubmit.js"></script>
   <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- End custom js for this page -->
+    <script>
+    tinymce.init({
+      selector: 'textareaMCE',
+      plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+    });
+  </script>
 	
   </body>
 </html>

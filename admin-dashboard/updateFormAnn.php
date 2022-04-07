@@ -16,6 +16,7 @@ if(!isset($_SESSION['success'])){
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <script src="https://cdn.tiny.cloud/1/uyccmfybr5gp0lpj6urgkep0ffgpjqnvawwxxrn4v2nt4brx/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -59,7 +60,7 @@ if(!isset($_SESSION['success'])){
                       </div>
                       <div class="form-group">
                         <label for="exampleTextarea1">Summary: </label>
-                        <textarea class="form-control" name="summary" id="summary" rows="20"><?= $editA['summary'] ?></textarea>
+                        <textareaMCE class="form-control" name="summary" id="summary" rows="20"><?= $editA['summary'] ?></textareaMCE>
                       </div> 
                       <div class="form-group">
                         <label for="exampleTextarea1">Content: </label>
@@ -89,5 +90,16 @@ if(!isset($_SESSION['success'])){
       </div>
       <!-- page-body-wrapper ends -->
     </div>
+
+    <script>
+    tinymce.init({
+      selector: 'textareaMCE',
+      plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+    });
+  </script>
   </body>
 </html>

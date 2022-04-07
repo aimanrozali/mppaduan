@@ -20,7 +20,7 @@ if(isset($_GET['deleteId'])){
 function update_data($id,$conn){
   //$title = filterInput($_POST["title"]);
   $summary = filterInput($_POST["summary"]);
-  $content = filterInput($_POST["content"]);
+  $content = $_POST["content"];
 
   $sql = "UPDATE announcement SET summary='$summary', content= '$content' WHERE id='$id'";
 

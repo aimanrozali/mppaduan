@@ -32,7 +32,7 @@ function CustomConfirmDel() {
     document.getElementById('dialogbox-success').style.display = "none";
     document.getElementById('dialogoverlay').style.display = "none";
     //Redirect to update unsolved report
-    window.location.replace("report_to_delete.php?del=1");
+    window.location.replace("reportDelete.php?del=1");
   }
 
   this.cancel = function () {
