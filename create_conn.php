@@ -1,9 +1,10 @@
 <?php
 
-$servername = "aduanmpp.mysql.database.azure.com";
-$username = "adminkacak@aduanmpp";
-$password = "Kacak_gagah01";
-$dbname = "aduan";
+//Local connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mppaduan";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

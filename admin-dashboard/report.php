@@ -127,7 +127,7 @@ if(!isset($_SESSION['success'])){
 					            <p class="card-description"> Status: </p>
                       <?php if($rows['resolved']==false) { ?>
 					            <div class = "w-100 my-n3 pb-2">
-					              <button type="button" class="btn btn-danger btn-lg w-93" id = "popup-confirm"> UNSOLVED </button>
+                      <button type="button" class="btn btn-danger btn-lg w-93" id = "popup-confirm"> UNSOLVED </button>
 
                         <?php } else { ?>
                       <div class = "w-100 my-n3 pb-2">
