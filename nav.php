@@ -8,9 +8,9 @@
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="menu">
                 <li> <a href="index.php">Home</a> </li>
-                <li> <a href="aduan.php">Aduan</a> </li>
-                <li> <a href="bantuan.php">Bantuan</a> </li>
-                <li> <a href="direktori.php">Direktori</a> </li>
+                <li> <a href="aduan.php">e-Aduan</a> </li>
+                <li> <a href="bantuan.php">Welfare</a> </li>
+                <li> <a href="direktori.php">Directory</a> </li>
             </div>
             </div>
     </nav>

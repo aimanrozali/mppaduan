@@ -21,7 +21,7 @@
 <body>
 
     <!-- === NAVIGATION BAR === -->
-    <?php include "nav.php"; ?>s
+    <?php include "nav.php"; ?>
 
     <!-- === HERO SECTION === -->
     <section class="hero-section">
@@ -51,7 +51,7 @@
                 <div class="icon-wrapper">
                     <i class="fa-solid fa-flag"></i>
                 </div>
-                <h3>Complaint</h3>
+                <h3>e-Aduan</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
                     reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
                     eligendi quasi explicabo.</p>
@@ -62,7 +62,7 @@
                 <div class="icon-wrapper">
                     <i class="fa-solid fa-hand-holding-hand"></i>
                 </div>
-                <h3>Bantuan</h3>
+                <h3>Welfare</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
                     reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
                     eligendi quasi explicabo.</p>

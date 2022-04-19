@@ -53,19 +53,13 @@
         <form action="add_data.php">
           <h3 class="title">Student details</h3>
           <div class="input-container">
-            <input type="text" name="name" class="input" autocomplete="off" required />
-            <label for="">Name</label>
-            <span>Name</span>
+            <input type="text" name="name" class="input" autocomplete="off" placeholder="Name" required />
           </div>
           <div class="input-container">
-            <input type="text" name="matric" autocomplete="off" maxlength="6" class="input" required />
-            <label for="">Matrics Number</label>
-            <span>Matrics Number</span>
+            <input type="text" name="matric" autocomplete="off" maxlength="6" class="input" placeholder="Matrics Number" required />
           </div>
           <div class="input-container">
-            <input type="email" name="email" class="input" autocomplete="off" required />
-            <label for="">Student Email</label>
-            <span>Student Email</span>
+            <input type="email" name="email" class="input" autocomplete="off" placeholder="Student Email" required />
           </div>
 
           <div class="school-input">
@@ -78,14 +72,10 @@
             </select>
           </div>
           <div class="input-container">
-            <input type="text" name="reporttitle" class="input" autocomplete="off" required />
-            <label for="">Title</label>
-            <span>Title</span>
+            <input type="text" name="reporttitle" class="input" autocomplete="off" placeholder="Title" required />
           </div>
           <div class="input-container textarea">
-            <textarea name="content" class="input" autocomplete="off" required></textarea>
-            <label for="">Message</label>
-            <span>Message</span>
+            <textarea name="content" class="input" autocomplete="off" placeholder="Message" required></textarea>
           </div>
           <input type="submit" value="Send" class="btn" />
         </form>

@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -26,7 +28,7 @@ li {
   background-color: white;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  
+
 }
 
 .nav-links a {
@@ -237,7 +239,7 @@ input[type=checkbox] {
 
 .announce-img {
   width: 100%;
-  height: auto;
+  height: 350px;
 }
 
 
@@ -308,6 +310,7 @@ input[type=checkbox] {
 }
 
 .icons {
+  font-size: 2rem;
   margin: 0 0.813rem;
   cursor: pointer;
   padding: 1.125rem 0;
@@ -416,6 +419,12 @@ input[type=checkbox] {
 
 
 /* ---ADUAN SECTION--- */
+
+::placeholder {
+  color: white;
+}
+
+
 
 .aduan-container {
   position: relative;
@@ -880,6 +889,10 @@ select {
 
 }
 
+.jawatan{
+  text-align: center;
+}
+
 .gallery-image {
   padding: 20px;
   display: flex;
@@ -963,12 +976,17 @@ select {
 
 .blog-image {
   margin: auto;
-  width: 100% ;
+  width: 50%;
+  height: 50%;
   padding: 20px;
 }
 
 .blog-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px 5px 0 0;
 }
 
 .blog-card {
@@ -976,7 +994,7 @@ select {
   padding: 2rem;
 }
 
-.blog-card h4{
+.blog-card h4 {
   margin: 2rem 0;
 }
 
