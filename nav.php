@@ -1,6 +1,6 @@
 <nav class="navbar">
         <div class="logo">
-            <img src="images/LOGO POSTER.png" alt="">
+            <a href="index.php"><img src="images/LOGO POSTER.png" alt=""></a>
         </div>
 
         <ul class="nav-links">

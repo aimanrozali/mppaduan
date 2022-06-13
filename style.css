@@ -316,6 +316,10 @@ input[type=checkbox] {
   padding: 1.125rem 0;
 }
 
+.icons a{
+  color: white;
+}
+
 
 /* === BANTUAN SECTION === */
 

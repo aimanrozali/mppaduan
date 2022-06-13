@@ -37,35 +37,29 @@
         <h1>Our Services</h1>
 
         <div class="row">
-            <div class="col" onclick="location.href='direktori.html';">
+            <div class="col" onclick="location.href='direktori.php';">
                 <div class="icon-wrapper">
                     <i class="fa-solid fa-people-group"></i>
                 </div>
                 <h3>Directory</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
-                    reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
-                    eligendi quasi explicabo.</p>
+                <p>Know your Student Representatives. If there are any concerns, kindly reach out to our respective student email according to school and / or portfolio.</p>
             </div>
 
-            <div class="col" onclick="location.href='aduan.html';">
+            <div class="col" onclick="location.href='aduan.php';">
                 <div class="icon-wrapper">
                     <i class="fa-solid fa-flag"></i>
                 </div>
                 <h3>e-Aduan</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
-                    reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
-                    eligendi quasi explicabo.</p>
+                <p>Drop your concern(s) through the right channel by kindly filling up our e-Aduan. We will try our best to help you out.</p>
             </div>
 
 
-            <div class="col" onclick="location.href='bantuan.html';">
+            <div class="col" onclick="location.href='bantuan.php';">
                 <div class="icon-wrapper">
                     <i class="fa-solid fa-hand-holding-hand"></i>
                 </div>
-                <h3>Welfare</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a corrupti dolor sunt voluptas
-                    reiciendis fuga vero nesciunt voluptatum esse adipisci at, asperiores eum harum maiores alias
-                    eligendi quasi explicabo.</p>
+                <h3>Student's Aid</h3>
+                <p>If you are in need of any kinds of aid; especially financially and monetary aid, kindly click here to find out more that is currently provided by the university. Aids are provided and updated from time-to-time..</p>
             </div>
 
         </div>

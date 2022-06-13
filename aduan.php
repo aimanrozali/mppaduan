@@ -26,8 +26,7 @@
       <div class="contact-info">
         <h3 class="title">Aduan</h3>
         <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          dolorum adipisci recusandae praesentium dicta!
+        Kindly fill up your details and drop your concern(s) in the space provided. We will then proceed to raise your concern(s) and further try to solve the problem at hand. If immediate actions are needed, you can directly contact any of us through the email provided in the Directory or direct message us on Instagram @mppusm.official.
         </p>
 
         <div class="info">
